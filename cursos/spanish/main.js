@@ -127,3 +127,11 @@ function toggleContent16() {
   contentId.style.display == "block" ? contentId.style.display = "none" : 
 contentId.style.display = "block"; 
 }
+
+function toggleContent17() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content17");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
