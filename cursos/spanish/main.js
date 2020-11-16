@@ -95,3 +95,11 @@ function toggleContent12() {
   contentId.style.display == "block" ? contentId.style.display = "none" : 
 contentId.style.display = "block"; 
 }
+
+function toggleContent13() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content13");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
