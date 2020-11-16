@@ -103,3 +103,19 @@ function toggleContent13() {
   contentId.style.display == "block" ? contentId.style.display = "none" : 
 contentId.style.display = "block"; 
 }
+
+function toggleContent14() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content14");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
+
+function toggleContent15() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content15");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
