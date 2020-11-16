@@ -135,3 +135,19 @@ function toggleContent17() {
   contentId.style.display == "block" ? contentId.style.display = "none" : 
 contentId.style.display = "block"; 
 }
+
+function toggleContent18() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content18");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
+
+function toggleContent19() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content19");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
