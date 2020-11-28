@@ -175,3 +175,27 @@ function toggleContent22() {
   contentId.style.display == "block" ? contentId.style.display = "none" : 
 contentId.style.display = "block"; 
 }
+
+function toggleContent23() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content23");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
+
+function toggleContent24() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content24");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
+
+function toggleContent25() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content25");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
