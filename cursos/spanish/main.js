@@ -207,3 +207,52 @@ function toggleContent26() {
   contentId.style.display == "block" ? contentId.style.display = "none" : 
 contentId.style.display = "block"; 
 }
+function toggleContent27() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content27");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
+function toggleContent28() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content28");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
+function toggleContent29() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content29");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
+function toggleContent30() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content30");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
+function toggleContent31() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content31");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
+function toggleContent32() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content32");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
+function toggleContent33() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content33");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
