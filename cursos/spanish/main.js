@@ -264,3 +264,19 @@ function toggleContent34() {
   contentId.style.display == "block" ? contentId.style.display = "none" : 
 contentId.style.display = "block"; 
 }
+
+function toggleContent35() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content35");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
+
+function toggleContent36() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content36");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
