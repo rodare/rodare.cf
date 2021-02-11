@@ -1,0 +1,120 @@
+body{
+	font-family: helvetica;
+}
+
+header h1, h1 a{
+	margin: 0;
+	text-align: left;
+	color: #FDE5C9;
+	text-decoration: none;
+	text-shadow: 5px 10px 20px black;
+	}
+header h3{
+	margin-top: 10px;
+	text-align: left;
+	color: #FDE5C9;
+	text-decoration: none;
+	position: absolute;
+	}
+.elheader{
+	background: url(../img/mapa-comercio4.jpg) no-repeat;
+	width: 100%;
+	max-width: none;
+	height: 200px;
+}
+#logo{
+	margin: -186px 0 0 0;
+}
+.texto{
+	margin: 5px 0 0 97px;
+	text-indent: none;
+	position: absolute;
+	width: 323px;
+	height: 177px;
+}
+.texto a:hover{
+	font-weight: bold;
+	text-decoration: none;
+	color: #E6A470;
+}
+.wrap{
+	min-width: 600px;
+	width: 80%;
+	margin: auto;
+	padding: 5px;
+	background: #8FADC7;
+	overflow: hidden;
+	}
+.navigation{
+	background: #A59888;
+	margin: -5px 0 -10px 0;
+}
+.navigation li{
+	display: inline;
+	padding-right: 10px;
+}	
+
+li a {
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+
+li a:hover {
+	font-weight: bold;
+	text-decoration: none;
+	color: #FFCC66;
+}
+.content, aside{
+	height: 1200px;
+	margin: 0px;
+}
+
+.content{
+	background: #e3e3e3;
+	float: right;
+	width: 85%;
+	padding-left: 1%;
+	margin: 0;
+}
+aside {
+	background: #A59888;
+	float: left;
+	width: 13%;
+	padding-left: 1%;
+}
+
+aside ul {
+	list-style: none;
+	padding-left: 0px;
+}
+aside li{
+	padding-top: 10px;
+}
+
+form li {
+	list-style: none;
+	margin-bottom: 20px
+}
+	
+form ul{
+		padding-left:0;
+}
+
+label {
+	display: block;
+	cursor: pointer;
+	color: #292929;
+	font-family: sans-serif;
+	padding-bottom: 8px;
+}
+
+textarea {
+	width: 400px;
+	height: 200px;
+}
+
+#aparte{
+	margin: 10px 0 10px -37px;
+	font-weight: bold;
+}
