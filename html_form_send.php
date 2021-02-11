@@ -103,6 +103,15 @@ $headers = 'From: '.$email_from."\r\n".
 
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TF5J20WEMP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TF5J20WEMP');
+</script>
 </head>
 <body>
   <!-- GTranslate: https://gtranslate.io/ -->
