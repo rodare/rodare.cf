@@ -71,6 +71,7 @@ ul.vmenu a
 {
    font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    line-height: 175%;
+   text-align:justify;
 }
 
 .postcontent p
@@ -412,7 +413,7 @@ text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
    margin:5px auto 0;
    position:relative;
    cursor:auto;
-   width: 850px;
+   width: 930px;
    z-index: auto !important;
 }
 
@@ -2369,7 +2370,7 @@ img.lightbox-image.active
 {
    border-right:1px dotted #A3B4C8;
    margin:0 auto;
-   width: 200px;
+   width: 147px;
 }
 
 .content-layout .content
