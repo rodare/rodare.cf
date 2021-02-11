@@ -1126,6 +1126,7 @@ jQuery(function () {
 
 
 
+
 jQuery(function ($) {
     "use strict";
     if (!$.browser.msie || parseInt($.browser.version, 10) > 8)
