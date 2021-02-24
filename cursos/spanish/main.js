@@ -304,3 +304,18 @@ function toggleContent39() {
   contentId.style.display == "block" ? contentId.style.display = "none" : 
 contentId.style.display = "block"; 
 }
+
+function toggleContent40() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content40");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
+function toggleContent41() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content41");
+  // Toggle 
+  contentId.style.display == "block" ? contentId.style.display = "none" : 
+contentId.style.display = "block"; 
+}
