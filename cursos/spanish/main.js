@@ -354,3 +354,26 @@ function toggleContent46() {
   contentId.style.display == "block" ? contentId.style.display = "none" :
 contentId.style.display = "block";
 }
+function toggleContent47() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content47");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block";
+}
+
+function toggleContent48() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content48");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block";
+}
+
+function toggleContent49() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content49");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block";
+}
