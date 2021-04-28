@@ -12,10 +12,10 @@ color: #4E6883;
     width: 100%;
 }
 
-.headline, 
-.headline a, 
-.headline a:link, 
-.headline a:visited, 
+.headline,
+.headline a,
+.headline a:link,
+.headline a:visited,
 .headline a:hover
 {
 font-size: 30px;
@@ -77,6 +77,17 @@ padding: 10px 0px 20px 10px;
 
 }
 
+.responsive{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 56.26%;
+    position: relative;
+}
+.responsive iframe{
+    position: absolute;
+    width: 100%;
+    box-sizing:border-box;
+}
 @media only screen and (min-width:768px){
 
     .img-banner {
@@ -96,7 +107,7 @@ padding: 10px 0px 20px 10px;
 
     .img-me {
         padding-top:30px;
-    
+
     }
 }
 

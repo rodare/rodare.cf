@@ -377,3 +377,11 @@ function toggleContent49() {
   contentId.style.display == "block" ? contentId.style.display = "none" :
 contentId.style.display = "block";
 }
+
+function toggleContent50() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content50");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block";
+}
