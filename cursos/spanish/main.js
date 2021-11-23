@@ -409,3 +409,11 @@ function toggleContent53() {
   contentId.style.display == "block" ? contentId.style.display = "none" :
 contentId.style.display = "block";
 }
+
+function toggleContent54() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content54");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block";
+}
