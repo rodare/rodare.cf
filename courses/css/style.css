@@ -181,6 +181,7 @@ line-height: 0px;
    .img-banner {
        display: block;
        width: 100%;
+       height: 200px;
      }
 
    ul.elmenu {
