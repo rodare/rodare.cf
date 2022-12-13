@@ -62,6 +62,9 @@ line-height: 0px;
   height:90px;
 }
 
+.course-selection{
+  text-align: left;
+}
 .img-banner2 {
     display: block;
     width: 100%;
