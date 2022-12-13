@@ -1,3 +1,206 @@
+function courseLevel(){
+          var a= document.getElementById("input").value;
+              if(a==="select course"){
+            var arr=["select level"];
+              }
+              else if(a==="Spanish"){
+            var arr=["select level","A1(iniciación)", "A2(básico)", "B1(intermedio)", "B2(intermedio alto)", "C1(avanzado)", "C2(muy avanzado)"];
+              }
+              else if(a==="Japanese"){
+            var arr=["select level","A1(入門)", "A2(N5)", "B1(N4)", "B2(N3)", "C1(N2)", "C2(N1)"];
+                    }
+              else if(a==="English"){
+            var arr=["select level","A1(introductory)", "A2(basic)", "B1(intermediate)", "B2(upper-intermediate)", "C1(advanced)", "C2(very advanced)"];
+                      }
+              else if(a==="Piano"){
+            var arr=["select level","Beginner", "Intermediate"];
+                      }
+              else
+            var string="";
+
+            for(i=0;i<arr.length;i++){
+              string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
+            }
+            document.getElementById("output").innerHTML=string;
+
+            }
+
+function levelModality(){
+  var a= document.getElementById("output").value;
+    if (a==="select level"){
+      var arr=["select modality"];
+    }
+    else {
+var arr=["select modality", "Online", "Stationary"];
+    }
+var string="";
+for(i=0;i<arr.length;i++){
+  string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
+    }
+    document.getElementById("output2").innerHTML=string;
+
+}
+
+function courseRedirect(){
+var a= document.getElementById("output2").value;
+var b= document.getElementById("output").value;
+
+if (a==="select level" & b==="select course"){
+  var arr=["select modality"];
+}
+
+else if(a==="Online" && b==="A1(iniciación)"){
+location.replace("a1-iniciacion.html")
+}
+else if(a==="Stationary" && b==="A1(iniciación)"){
+location.replace("a1-iniciacion2.html")
+}
+
+else if(a==="Online" && b==="A2(básico)"){
+location.replace("a2-basico.html")
+}
+else if(a==="Stationary" && b==="A2(básico)"){
+location.replace("a2-basico2.html")
+}
+
+else if(a==="Online" && b==="B1(intermedio)"){
+location.replace("b1-intermedio.html")
+}
+else if(a==="Stationary" && b==="B1(intermedio)"){
+location.replace("b1-intermedio2.html")
+}
+
+else if(a==="Online" && b==="B2(intermedio alto)"){
+location.replace("b2-intermedioalto.html")
+}
+else if(a==="Stationary" && b==="B2(intermedio alto)"){
+location.replace("b2-intermedioalto2.html")
+}
+
+else if(a==="Online" && b==="C1(avanzado)"){
+location.replace("c1-avanzado.html")
+}
+else if(a==="Stationary" && b==="C1(avanzado)"){
+location.replace("c1-avanzado2.html")
+}
+
+else if(a==="Online" && b==="C2(muy avanzado)"){
+location.replace("c2-muyavanzado.html")
+}
+else if(a==="Stationary" && b==="C2(muy avanzado)"){
+location.replace("c2-muyavanzado2.html")
+}
+
+else if(a==="Online" && b==="A1(introductory)"){
+location.replace("a1-introductory.html")
+}
+else if(a==="Stationary" && b==="A1(introductory)"){
+location.replace("a1-introductory2.html")
+}
+
+else if(a==="Online" && b==="A2(basic)"){
+location.replace("a2-basic.html")
+}
+else if(a==="Stationary" && b==="A2(basic)"){
+location.replace("a2-basic2.html")
+}
+
+else if(a==="Online" && b==="B1(intermediate)"){
+location.replace("b1-intermediate.html")
+}
+else if(a==="Stationary" && b==="B1(intermediate)"){
+location.replace("b1-intermediate2.html")
+}
+
+else if(a==="Online" && b==="B2(upper intermediate)"){
+location.replace("b2-upperintermediate.html")
+}
+else if(a==="Stationary" && b==="B2(upper intermediate)"){
+location.replace("b2-upperintermediate2.html")
+}
+
+else if(a==="Online" && b==="C1(advanced)"){
+location.replace("c1-advanced.html")
+}
+else if(a==="Stationary" && b==="C1(advanced)"){
+location.replace("c1-advanced2.html")
+}
+
+else if(a==="Online" && b==="C2(very advanced)"){
+location.replace("c2-veryadvanced.html")
+}
+else if(a==="Stationary" && b==="C2(very advanced)"){
+location.replace("c2-veryadvanced2.html")
+}
+
+else if(a==="Online" && b==="A1(入門)"){
+location.replace("a1-nyuumon.html")
+}
+else if(a==="Stationary" && b==="A1(入門)"){
+location.replace("a1-nyuumon2.html")
+}
+
+else if(a==="Online" && b==="A2(N5)"){
+location.replace("a2-n5.html")
+}
+else if(a==="Stationary" && b==="A2(N5)"){
+location.replace("a2-n52.html")
+}
+
+else if(a==="Online" && b==="B1(N4)"){
+location.replace("b1-n4.html")
+}
+else if(a==="Stationary" && b==="B1(N4)"){
+location.replace("b1-n42.html")
+}
+
+else if(a==="Online" && b==="B2(N3)"){
+location.replace("b2-n3.html")
+}
+else if(a==="Stationary" && b==="B2(N3)"){
+location.replace("b2-n32.html")
+}
+
+else if(a==="Online" && b==="C1(N2)"){
+location.replace("c1-n2.html")
+}
+else if(a==="Stationary" && b==="C1(N2)"){
+location.replace("c1-n22.html")
+}
+
+else if(a==="Online" && b==="C2(N1)"){
+location.replace("c2-n1.html")
+}
+else if(a==="Stationary" && b==="C2(N1)"){
+location.replace("c2-n12.html")
+}
+
+else if(a==="Online" && b==="Beginner"){
+location.replace("beginner.html")
+}
+else if(a==="Stationary" && b==="Beginner"){
+location.replace("beginner2.html")
+}
+
+else if(a==="Online" && b==="Intermediate"){
+location.replace("intermediate.html")
+}
+else if(a==="Stationary" && b==="Intermediate"){
+location.replace("intermediate2.html")
+}
+
+
+
+  else
+  var string="";
+
+  for(i=0;i<arr.length;i++){
+    string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
+}
+document.getElementById("output2").innerHTML=string;
+
+}
+
 
 function toggleContent1() {
   // Get the DOM reference

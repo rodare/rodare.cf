@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+Images by Shermeee:
+http://www.flickr.com/photos/smanography/
+
+Attribution 2.0 Generic (CC BY 2.0)
+http://creativecommons.org/licenses/by/2.0/deed.en_GB
+=======
+Images by Shermeee:
+http://www.flickr.com/photos/smanography/
+
+Attribution 2.0 Generic (CC BY 2.0)
+http://creativecommons.org/licenses/by/2.0/deed.en_GB
+>>>>>>> 9b7d9328d4e1b6ab54b51a1f3012988ddecae964

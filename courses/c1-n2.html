@@ -5,6 +5,7 @@
           <title>Rodare</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="css/style.css">
+          <script type="text/javascript" src="js/main.js"></script>
       </head>
       <body>
           <img class="img-banner" src="images/banner2b.jpg" alt="books banner">
@@ -26,24 +27,38 @@
                       </div>
                     </li>
                     <li class="elmenu"><a href="calendar.html">Calendar</a></li>
-                    <li class="elmenu"><a href="contact.html">Contact</a></li>
+                    <li class="elmenu"><a href="signup.html">Sign-up</a></li>
                 </ul>
-                <article class="img-info">
-            <div id="main-content">
-          <div class="responsive">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdWNatJKilWx-WubGo4z8er5zlfdvuWQH7EOeCaCZUmAurGSA/viewform?embedded=true" width="640" height="820" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          <article class="img-info">
+          <div id="main-content">
+            <h1>Sign-up for a course</h1>
+            <div "course-selection" style="display: inline;">
+            <select id="input" onchange="courseLevel()">
+              <option>Japanese</option>
+              <option>Spanish</option>
+              <option>English</option>
+              <option>Piano</option>
+                      <option>select course</option>
+                    </select>
+            		   <select id="output" onchange="levelModality()">
+                     <option>C1(N2)</option>
+                     <option>C2(N1)</option>
+                     <option>A1(入門)</option>
+                     <option>A2(N5)</option>
+                     <option>B1(N4)</option>
+                     <option>B2(N3)</option>
+                     <option>select level</option>
+            		</select>
+            			<select id="output2" onchange="courseRedirect()">
+                    <option>Online</option>
+                    <option>Stationary</option>
+                    <option>select modality</option>
+                </select>
+                  </div>
+              <h1>Japanese C1(N2) Online</h1>
+              </div>
+            </article>
           </div>
-          <div class="responsive">
 
-          <div id="contact">
-            <h1>Map of the place</h1>
-
-        <br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.701992279551!2d19.903965508605395!3d50.05441362374297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b4959c50e2d%3A0x76b0811e81f8e594!2sOgr%C3%B3d%20Spo%C5%82eczny%20Salwator!5e0!3m2!1sen!2spl!4v1615830055983!5m2!1sen!2spl" width="640" height="820" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        </div>
-  </div>
-      </div>
-      </article>
-    </div>
-  </body>
-</html>
+          </body>
+          </html>

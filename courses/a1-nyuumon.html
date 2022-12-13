@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+  <html lang="en">
+      <head>
+          <meta charset="utf-8">
+          <title>Rodare</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="css/style.css">
+          <script type="text/javascript" src="js/main.js"></script>
+      </head>
+      <body>
+          <img class="img-banner" src="images/banner2b.jpg" alt="books banner">
+            <div class="wrapper">
+                <h2 class="headline" data-left="2.05%">
+                <a href="index.html">Rodare</a>
+                </h2>
+                <img class="img-banner2" src="images/banner4.jpg" alt="ogród">
+                <ul class="elmenu">
+                    <li class="elmenu"><a href="index.html">Home</a></li>
+                    <li class="elmenu"><a href="https://rodare1.blogspot.com/">Blog</a></li>
+                    <li class="dropdown elmenu">
+                      <a href="courses.html" class="dropbtn elmenu">Courses</a>
+                      <div class="dropdown-content elmenu">
+                        <a href="spanish.html" class="elmenu">Spanish</a>
+                        <a href="japanese.html" class="elmenu">Japanese</a>
+                        <a href="english.html" class="elmenu">English</a>
+                        <a href="piano.html" class="elmenu">Piano</a>
+                      </div>
+                    </li>
+                    <li class="elmenu"><a href="calendar.html">Calendar</a></li>
+                    <li class="elmenu"><a href="signup.html">Sign-up</a></li>
+                </ul>
+          <article class="img-info">
+          <div id="main-content">
+            <h1>Sign-up for a course</h1>
+            <div "course-selection" style="display: inline;">
+            <select id="input" onchange="courseLevel()">
+                      <option>Japanese</option>
+                      <option>Spanish</option>
+                      <option>English</option>
+                      <option>Piano</option>
+                      <option>select course</option>
+                    </select>
+            		   <select id="output" onchange="levelModality()">
+                     <option>A1(入門)</option>
+                     <option>A2(N5)</option>
+                     <option>B1(N4)</option>
+                     <option>B2(N3)</option>
+                     <option>C1(N2)</option>
+                     <option>C2(N1)</option>
+                     <option>select level</option>
+            		</select>
+            			<select id="output2" onchange="courseRedirect()">
+                    <option>Online</option>
+                    <option>Stationary</option>
+                    <option>select modality</option>
+                </select>
+                  </div>
+              <h1>Japanese A1(入門) Online</h1>
+              </div>
+            </article>
+          </div>
+
+          </body>
+          </html>
