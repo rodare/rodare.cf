@@ -174,7 +174,8 @@ table {
 td, th {
   border: 1px solid black;
   text-align: left;
-  padding: 4px;
+  font-size: 13px;
+  padding: 2px;
 }
 
 tr:nth-child(even) {
@@ -186,9 +187,10 @@ select{width:111px;height: 40px;font-size: 12px;text-align-last: center;}
 #price{
   position: relative;
   right:14px;
-  margin:4px -10px;
+  margin:4px -14px;
 }
 
+#order{background-color:red; color:white; position:absolute; margin:-16px 3px; padding:7px 8px;text-align: left;}
 
    @media only screen and (min-width:768px){
  .wrapper {
@@ -238,12 +240,15 @@ select{width:111px;height: 40px;font-size: 12px;text-align-last: center;}
    td, th {
      border: 1px solid black;
      text-align: left;
+     font-size: 15px;
      padding: 8px;
    }
 
 select{width:190px;height: 30px;font-size: 15px;text-align-last: center;}
 
 }
+
+#order{background-color:red; color:white; position:absolute; margin:-16px 3px; padding:7px 8px;text-align: left;}
 
    @media only screen and (min-width: 1100px){
 
@@ -271,8 +276,11 @@ select{width:190px;height: 30px;font-size: 15px;text-align-last: center;}
            width: 50%;
            float: left;
        }
-      .course-selection{
-      }
 
       select{width:190px;height: 30px;font-size: 15px;text-align-last: center;}
+
+      td, th {
+        font-size: 17px;
+      }
+
    }
