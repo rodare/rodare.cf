@@ -174,14 +174,21 @@ table {
 td, th {
   border: 1px solid black;
   text-align: left;
-  padding: 8px;
+  padding: 4px;
 }
 
 tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-select{width:100px;height: 40px;font-size: 15px;text-align-last: center;}
+select{width:111px;height: 40px;font-size: 12px;text-align-last: center;}
+
+#price{
+  position: relative;
+  right:14px;
+  margin:4px -10px;
+}
+
 
    @media only screen and (min-width:768px){
  .wrapper {
@@ -227,6 +234,11 @@ select{width:100px;height: 40px;font-size: 15px;text-align-last: center;}
    }
    .img-me {
        padding-top:30px;
+   }
+   td, th {
+     border: 1px solid black;
+     text-align: left;
+     padding: 8px;
    }
 
 select{width:190px;height: 30px;font-size: 15px;text-align-last: center;}
