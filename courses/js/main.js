@@ -38,7 +38,6 @@ for(i=0;i<arr.length;i++){
   string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
     }
     document.getElementById("output2").innerHTML=string;
-
 }
 
 function courseRedirect(){
@@ -112,10 +111,10 @@ else if(a==="Stationary" && b==="B1(intermediate)"){
 location.replace("b1-intermediate2.html")
 }
 
-else if(a==="Online" && b==="B2(upper intermediate)"){
+else if(a==="Online" && b==="B2(upper-intermediate)"){
 location.replace("b2-upperintermediate.html")
 }
-else if(a==="Stationary" && b==="B2(upper intermediate)"){
+else if(a==="Stationary" && b==="B2(upper-intermediate)"){
 location.replace("b2-upperintermediate2.html")
 }
 
@@ -650,4 +649,20 @@ function toggleContent58() {
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
 contentId.style.display = "block";
+}
+
+function toggleContent59() {
+  // Get the DOM reference
+  var contentId = document.getElementById("form-spaA1o");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block"; window.scrollBy(0, 200);
+}
+
+function toggleContent60() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content60");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block"; window.scrollBy(0, 500);
 }

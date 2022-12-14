@@ -161,6 +161,28 @@ line-height: 0px;
   margin: 8px 2px 76px;
   width: 188px;
 }
+
+h1{
+  text-align: left;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+select{width:100px;height: 40px;font-size: 15px;text-align-last: center;}
+
    @media only screen and (min-width:768px){
  .wrapper {
      width: 750px;
@@ -201,12 +223,13 @@ line-height: 0px;
        padding: 11px 0px 0px;
    }
    .img-info p {
-       padding: 6px 0px 0px;
+       padding: 0px 0px 0px;
    }
    .img-me {
        padding-top:30px;
    }
 
+select{width:190px;height: 30px;font-size: 15px;text-align-last: center;}
 
 }
 
@@ -220,7 +243,7 @@ line-height: 0px;
        }
 
        .img-info p {
-           padding: 20px 0px 0px 0px;
+           padding: 0px 0px 0px 0px;
        }
 
        .elmenu.li a, .elmenu.dropbtn {
@@ -236,4 +259,8 @@ line-height: 0px;
            width: 50%;
            float: left;
        }
+      .course-selection{
+      }
+
+      select{width:190px;height: 30px;font-size: 15px;text-align-last: center;}
    }
