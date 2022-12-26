@@ -36,6 +36,13 @@ line-height: 0px;
   color: #FA6114 !important;
   white-space: nowrap;
 }
+
+.translate{
+  text-align:right;
+  position:absolute;
+  top:0;
+  right:2px;
+}
 #main-content {
     max-width: 1439px;
     margin: 0 auto;
@@ -92,10 +99,10 @@ line-height: 0px;
   /* Dropdown menu start */
   ul.elmenu {
       list-style-type: none;
-      margin-top: -5px;
+      margin-top: -8px;
       padding: 0;
       overflow: hidden;
-      background-color: #333;
+      background-color: dimgrey;
     }
 
     li.elmenu {
@@ -218,12 +225,19 @@ select{width:111px;height: 40px;font-size: 12px;text-align-last: center;}
        height: 200px;
      }
 
+     .translate{
+       text-align:right;
+       position:relative;
+       top:-61px;
+       right:2px;
+     }
+
    ul.elmenu {
        list-style-type: none;
        margin-top: -21px;
        padding: 0;
        overflow: hidden;
-       background-color: #333;
+       background-color: dimgrey;
      }
      li.elmenu a, .elmenu.dropbtn {
        padding: 12px 13px;
