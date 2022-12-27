@@ -13,7 +13,7 @@ function courseLevel(){
             var arr=["wybierz poziom","A1(wprowadzający)", "A2(podstawowy)", "B1(średniozaawansowany)", "B2(prawie-zaawansowany)", "C1(zaawansowany)", "C2(bardzo zaawansowany)"];
                       }
               else if(a==="Pianino"){
-            var arr=["wybierz poziom","Początkujący", "Średniozaawansowany"];
+            var arr=["wybierz poziom","Początkujący", "Podstawowy"];
                       }
               else
             var string="";
@@ -174,17 +174,17 @@ else if(a==="Stacjonarny" && b==="C2(N1)"){
 location.replace("c2-n12.html")
 }
 
-else if(a==="Online" && b==="Beginner"){
+else if(a==="Online" && b==="Początkujący"){
 location.replace("beginner.html")
 }
-else if(a==="Stacjonarny" && b==="Beginner"){
+else if(a==="Stacjonarny" && b==="Początkujący"){
 location.replace("beginner2.html")
 }
 
-else if(a==="Online" && b==="Intermediate"){
+else if(a==="Online" && b==="Podstawowy"){
 location.replace("intermediate.html")
 }
-else if(a==="Stacjonarny" && b==="Intermediate"){
+else if(a==="Stacjonarny" && b==="Podstawowy"){
 location.replace("intermediate2.html")
 }
 

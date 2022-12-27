@@ -1,5 +1,4 @@
 
-   @media only screen and (min-width: 10px){
 *{
   text-align: justify;
   font-family: sans-serif;
@@ -198,22 +197,11 @@ select{width:111px;height: 40px;font-size: 12px;text-align-last: center;}
   margin:4px -14px;
 }
 
-.order{
-  background-color:red; 
-  color:white; 
-  position:absolute; 
-  text-align: left;
-  font-size:9px;
-  margin:-16px -1px; 
-  padding:7px 3px;  
-  
-}
-}
+#order{background-color:red; color:white; position:absolute; margin:-16px 3px; padding:7px 8px;text-align: left;}
 
    @media only screen and (min-width:768px){
  .wrapper {
      width: 750px;
-     height: 750px;
      margin: -29px auto;
    }
 
@@ -274,11 +262,7 @@ select{width:190px;height: 30px;font-size: 15px;text-align-last: center;}
 
 }
 
-.order{
-  margin:-16px -7px; 
-  padding:7px 6px;
-  font-size:12px;
-}
+#order{background-color:red; color:white; position:absolute; margin:-16px 3px; padding:7px 8px;text-align: left;}
 
    @media only screen and (min-width: 1100px){
 
@@ -312,9 +296,5 @@ select{width:190px;height: 30px;font-size: 15px;text-align-last: center;}
       td, th {
         font-size: 17px;
       }
-        .order{
-          margin:-16px -6px; 
-          padding:7px 4px;
-          font-size:14px;
-}
+
    }
