@@ -1,19 +1,19 @@
 function courseLevel(){
           var a= document.getElementById("input").value;
-              if(a==="select course"){
-            var arr=["select level"];
+              if(a==="seleccionar curso"){
+            var arr=["seleccionar nivel"];
               }
-              else if(a==="Spanish"){
-            var arr=["select level","A1(iniciación)", "A2(básico)", "B1(intermedio)", "B2(intermedio alto)", "C1(avanzado)", "C2(muy avanzado)"];
+              else if(a==="Español"){
+            var arr=["seleccionar level","A1(iniciación)", "A2(básico)", "B1(intermedio)", "B2(intermedio alto)", "C1(avanzado)", "C2(muy avanzado)"];
               }
-              else if(a==="Japanese"){
-            var arr=["select level","A1(入門)", "A2(N5)", "B1(N4)", "B2(N3)", "C1(N2)", "C2(N1)"];
+              else if(a==="Japonés"){
+            var arr=["seleccionar nivel","A1(入門)", "A2(N5)", "B1(N4)", "B2(N3)", "C1(N2)", "C2(N1)"];
                     }
-              else if(a==="English"){
-            var arr=["select level","A1(introductory)", "A2(basic)", "B1(intermediate)", "B2(upper-intermediate)", "C1(advanced)", "C2(very advanced)"];
+              else if(a==="Inglés"){
+            var arr=["seleccionar nivel","A1(introductorio)", "A2(básico)", "B1(intermedio)", "B2(intermedio alto)", "C1(avanzado)", "C2(muy avanzado)"];
                       }
               else if(a==="Piano"){
-            var arr=["select level","Beginner", "Intermediate"];
+            var arr=["seleccionar nivel","Principiante", "Intermedio"];
                       }
               else
             var string="";
@@ -27,11 +27,11 @@ function courseLevel(){
 
 function levelModality(){
   var a= document.getElementById("output").value;
-    if (a==="select level"){
-      var arr=["select modality"];
+    if (a==="seleccionar nivel"){
+      var arr=["seleccionar modalidad"];
     }
     else {
-var arr=["select modality", "Online", "Stationary"];
+var arr=["seleccionar modalidad", "Online", "Estacionario"];
     }
 var string="";
 for(i=0;i<arr.length;i++){
@@ -44,147 +44,147 @@ function courseRedirect(){
 var a= document.getElementById("output2").value;
 var b= document.getElementById("output").value;
 
-if (a==="select level" & b==="select course"){
-  var arr=["select modality"];
+if (a==="seleccionar nivel" & b==="seleccionar curso"){
+  var arr=["seleccionar modalidad"];
 }
 
 else if(a==="Online" && b==="A1(iniciación)"){
 location.replace("a1-iniciacion.html")
 }
-else if(a==="Stationary" && b==="A1(iniciación)"){
+else if(a==="Estacionario" && b==="A1(iniciación)"){
 location.replace("a1-iniciacion2.html")
 }
 
 else if(a==="Online" && b==="A2(básico)"){
 location.replace("a2-basico.html")
 }
-else if(a==="Stationary" && b==="A2(básico)"){
+else if(a==="Estacionario" && b==="A2(básico)"){
 location.replace("a2-basico2.html")
 }
 
 else if(a==="Online" && b==="B1(intermedio)"){
 location.replace("b1-intermedio.html")
 }
-else if(a==="Stationary" && b==="B1(intermedio)"){
+else if(a==="Estacionario" && b==="B1(intermedio)"){
 location.replace("b1-intermedio2.html")
 }
 
 else if(a==="Online" && b==="B2(intermedio alto)"){
 location.replace("b2-intermedioalto.html")
 }
-else if(a==="Stationary" && b==="B2(intermedio alto)"){
+else if(a==="Estacionario" && b==="B2(intermedio alto)"){
 location.replace("b2-intermedioalto2.html")
 }
 
 else if(a==="Online" && b==="C1(avanzado)"){
 location.replace("c1-avanzado.html")
 }
-else if(a==="Stationary" && b==="C1(avanzado)"){
+else if(a==="Estacionario" && b==="C1(avanzado)"){
 location.replace("c1-avanzado2.html")
 }
 
 else if(a==="Online" && b==="C2(muy avanzado)"){
 location.replace("c2-muyavanzado.html")
 }
-else if(a==="Stationary" && b==="C2(muy avanzado)"){
+else if(a==="Estacionario" && b==="C2(muy avanzado)"){
 location.replace("c2-muyavanzado2.html")
 }
 
-else if(a==="Online" && b==="A1(introductory)"){
+else if(a==="Online" && b==="A1(introductorio)"){
 location.replace("a1-introductory.html")
 }
-else if(a==="Stationary" && b==="A1(introductory)"){
+else if(a==="Estacionario" && b==="A1(introductorio)"){
 location.replace("a1-introductory2.html")
 }
 
-else if(a==="Online" && b==="A2(basic)"){
+else if(a==="Online" && b==="A2(básico)"){
 location.replace("a2-basic.html")
 }
-else if(a==="Stationary" && b==="A2(basic)"){
+else if(a==="Estacionario" && b==="A2(básico)"){
 location.replace("a2-basic2.html")
 }
 
-else if(a==="Online" && b==="B1(intermediate)"){
+else if(a==="Online" && b==="B1(intermedio)"){
 location.replace("b1-intermediate.html")
 }
-else if(a==="Stationary" && b==="B1(intermediate)"){
+else if(a==="Estacionario" && b==="B1(intermedio)"){
 location.replace("b1-intermediate2.html")
 }
 
-else if(a==="Online" && b==="B2(upper-intermediate)"){
+else if(a==="Online" && b==="B2(intermedio alto)"){
 location.replace("b2-upperintermediate.html")
 }
-else if(a==="Stationary" && b==="B2(upper-intermediate)"){
+else if(a==="Estacionario" && b==="B2(intermedio alto)"){
 location.replace("b2-upperintermediate2.html")
 }
 
-else if(a==="Online" && b==="C1(advanced)"){
+else if(a==="Online" && b==="C1(avanzado)"){
 location.replace("c1-advanced.html")
 }
-else if(a==="Stationary" && b==="C1(advanced)"){
+else if(a==="Estacionario" && b==="C1(avanzado)"){
 location.replace("c1-advanced2.html")
 }
 
-else if(a==="Online" && b==="C2(very advanced)"){
+else if(a==="Online" && b==="C2(muy avanzado)"){
 location.replace("c2-veryadvanced.html")
 }
-else if(a==="Stationary" && b==="C2(very advanced)"){
+else if(a==="Estacionario" && b==="C2(muy avanzado)"){
 location.replace("c2-veryadvanced2.html")
 }
 
 else if(a==="Online" && b==="A1(入門)"){
 location.replace("a1-nyuumon.html")
 }
-else if(a==="Stationary" && b==="A1(入門)"){
+else if(a==="Estacionario" && b==="A1(入門)"){
 location.replace("a1-nyuumon2.html")
 }
 
 else if(a==="Online" && b==="A2(N5)"){
 location.replace("a2-n5.html")
 }
-else if(a==="Stationary" && b==="A2(N5)"){
+else if(a==="Estacionario" && b==="A2(N5)"){
 location.replace("a2-n52.html")
 }
 
 else if(a==="Online" && b==="B1(N4)"){
 location.replace("b1-n4.html")
 }
-else if(a==="Stationary" && b==="B1(N4)"){
+else if(a==="Estacionario" && b==="B1(N4)"){
 location.replace("b1-n42.html")
 }
 
 else if(a==="Online" && b==="B2(N3)"){
 location.replace("b2-n3.html")
 }
-else if(a==="Stationary" && b==="B2(N3)"){
+else if(a==="Estacionario" && b==="B2(N3)"){
 location.replace("b2-n32.html")
 }
 
 else if(a==="Online" && b==="C1(N2)"){
 location.replace("c1-n2.html")
 }
-else if(a==="Stationary" && b==="C1(N2)"){
+else if(a==="Estacionario" && b==="C1(N2)"){
 location.replace("c1-n22.html")
 }
 
 else if(a==="Online" && b==="C2(N1)"){
 location.replace("c2-n1.html")
 }
-else if(a==="Stationary" && b==="C2(N1)"){
+else if(a==="Estacionario" && b==="C2(N1)"){
 location.replace("c2-n12.html")
 }
 
-else if(a==="Online" && b==="Beginner"){
+else if(a==="Online" && b==="Principiante"){
 location.replace("beginner.html")
 }
-else if(a==="Stationary" && b==="Beginner"){
+else if(a==="Estacionario" && b==="Principiante"){
 location.replace("beginner2.html")
 }
 
-else if(a==="Online" && b==="Intermediate"){
+else if(a==="Online" && b==="Intermedio"){
 location.replace("intermediate.html")
 }
-else if(a==="Stationary" && b==="Intermediate"){
+else if(a==="Estacionario" && b==="Intermedio"){
 location.replace("intermediate2.html")
 }
 
