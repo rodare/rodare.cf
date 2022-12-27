@@ -5,6 +5,7 @@
           <title>Rodare</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="css/style.css">
+          <script type="text/javascript" src="js/main.js"></script>
       </head>
       <body>
           <img class="img-banner" src="images/banner2b.jpg" alt="books banner">
@@ -29,15 +30,36 @@
                     <li class="elmenu"><a href="calendar.html">Calendar</a></li>
                     <li class="elmenu"><a href="signup.html">Sign-up</a></li>
                 </ul>
-                <article class="img-info">
-                    <h2>About</h2>
-                    <p>Welcome to Rodrigo Arenas Catalán's courses site.
-This site was created to make it easier for students to approach the courses I teach. Each course has levels with exercises and tests which will be set as homework by the teacher along the class. Apart from these, each course has a book with audios that will be sent to each student before the beginning of the lessons. It also has a blog where you can access articles, notices and relevant information about the courses. To sign-up for a course, simply go to "Sign-up" and choose the course that best suits you.
-Cheers,
-Rodrigo Arenas Catalán.</p>
-
-                </article>
-                <img class="img-me" src="images/ogrod.jpeg" alt="ogród">
+          <article class="img-info">
+          <div id="main-content">
+            <p><h1>Sign-up for a course</h1></p>
+            <div "course-selection" style="display: inline;">
+            <select id="input" onchange="courseLevel()">
+              <option>Japanese</option>
+              <option>Spanish</option>
+              <option>English</option>
+              <option>Piano</option>
+                        <option>select course</option>
+                    </select>
+            		   <select id="output" onchange="levelModality()">
+                     <option>C2(N1)</option>
+                     <option>A1(入門)</option>
+                     <option>A2(N5)</option>
+                     <option>B1(N4)</option>
+                     <option>B2(N3)</option>
+                     <option>C1(N2)</option>
+                     <option>select level</option>
+            		</select>
+            			<select id="output2" onchange="courseRedirect()">
+                    <option>Online</option>
+                    <option>Stationary</option>
+                    <option>select modality</option>
+                </select>
+                  </div>
+              <p><h1>Japanese C2(N1) Stationary</h1></p>
               </div>
-        </body>
-  </html>
+            </article>
+          </div>
+
+          </body>
+          </html>

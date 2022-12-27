@@ -5,6 +5,7 @@
           <title>Rodare</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="css/style.css">
+
       </head>
       <body>
           <img class="img-banner" src="images/banner2b.jpg" alt="books banner">
@@ -30,14 +31,34 @@
                     <li class="elmenu"><a href="signup.html">Sign-up</a></li>
                 </ul>
                 <article class="img-info">
-                    <h2>About</h2>
-                    <p>Welcome to Rodrigo Arenas Catalán's courses site.
-This site was created to make it easier for students to approach the courses I teach. Each course has levels with exercises and tests which will be set as homework by the teacher along the class. Apart from these, each course has a book with audios that will be sent to each student before the beginning of the lessons. It also has a blog where you can access articles, notices and relevant information about the courses. To sign-up for a course, simply go to "Sign-up" and choose the course that best suits you.
-Cheers,
-Rodrigo Arenas Catalán.</p>
+            <div id="main-content">
+          <p><h1>Spanish</h1></p>
 
-                </article>
-                <img class="img-me" src="images/ogrod.jpeg" alt="ogród">
-              </div>
-        </body>
-  </html>
+
+
+        <article class="img-info">
+
+          <div class="menu">
+              <ul>
+                <li><a href="#" class="active" onclick="toggleContent1()">Niveles</a>
+                  <div id="content1" style="display:none;">
+                      <ul class="menu-niveles">
+                        <li><a href="spanish-a1.html">A1</a></li>
+                        <li><a href="spanish-a2.html">A2</a></li>
+                        <li><a href="spanish-b1.html">B1</a></li>
+                        <li><a href="spanish-b2.html">B2</a></li>
+                        <li><a href="spanish-c1.html">C1</a></li>
+                      </ul>
+                  </div>
+                </li>
+              </ul>
+          </div>
+
+          <h2>Descripción</h2>
+          <p>El objetivo de este sitio es facilitar a los estudiantes el acceso a una serie de ejercicios linguísticos diseñados especialmente para cada nivel de Español.</p>
+
+        </article>
+        <script type="text/javascript" src="js/main.js"></script>
+
+    </body>
+</html>
