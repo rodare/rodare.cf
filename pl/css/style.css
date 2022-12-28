@@ -190,7 +190,7 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-select{width:111px;height: 40px;font-size: 12px;text-align-last: center;}
+select{width:114px;height: 40px;font-size: 12px;text-align-last: center;}
 
 #price{
   position: relative;

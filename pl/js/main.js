@@ -10,7 +10,7 @@ function courseLevel(){
             var arr=["wybierz poziom","A1(入門)", "A2(N5)", "B1(N4)", "B2(N3)", "C1(N2)", "C2(N1)"];
                     }
               else if(a==="Angielski"){
-            var arr=["wybierz poziom","A1(wprowadzający)", "A2(podstawowy)", "B1(średniozaawansowany)", "B2(prawie-zaawansowany)", "C1(zaawansowany)", "C2(bardzo zaawansowany)"];
+            var arr=["wybierz poziom","A1(wprowadzający-ang)", "A2(podstawowy-ang)", "B1(średniozaawansowany-ang)", "B2(prawie-zaawansowany-ang)", "C1(zaawansowany-ang)", "C2(bardzo zaawansowany-ang)"];
                       }
               else if(a==="Pianino"){
             var arr=["wybierz poziom","Początkujący", "Podstawowy"];
@@ -90,45 +90,45 @@ else if(a==="Stacjonarny" && b==="C2(bardzo zaawansowany)"){
 location.replace("c2-muyavanzado2.html")
 }
 
-else if(a==="Online" && b==="A1(wprowadzający)"){
+else if(a==="Online" && b==="A1(wprowadzający-ang)"){
 location.replace("a1-introductory.html")
 }
-else if(a==="Stacjonarny" && b==="A1(wprowadzający)"){
+else if(a==="Stacjonarny" && b==="A1(wprowadzający-ang)"){
 location.replace("a1-introductory2.html")
 }
 
-else if(a==="Online" && b==="A2(podstawowy)"){
+else if(a==="Online" && b==="A2(podstawowy-ang)"){
 location.replace("a2-basic.html")
 }
-else if(a==="Stacjonarny" && b==="A2(podstawowy)"){
+else if(a==="Stacjonarny" && b==="A2(podstawowy-ang)"){
 location.replace("a2-basic2.html")
 }
 
-else if(a==="Online" && b==="B1(średniozaawansowany)"){
+else if(a==="Online" && b==="B1(średniozaawansowany-ang)"){
 location.replace("b1-intermediate.html")
 }
-else if(a==="Stacjonarny" && b==="B1(średniozaawansowany)"){
+else if(a==="Stacjonarny" && b==="B1(średniozaawansowany-ang)"){
 location.replace("b1-intermediate2.html")
 }
 
-else if(a==="Online" && b==="B2(prawie-zaawansowany)"){
+else if(a==="Online" && b==="B2(prawie-zaawansowany-ang)"){
 location.replace("b2-upperintermediate.html")
 }
-else if(a==="Stacjonarny" && b==="B2(prawie-zaawansowany)"){
+else if(a==="Stacjonarny" && b==="B2(prawie-zaawansowany-ang)"){
 location.replace("b2-upperintermediate2.html")
 }
 
-else if(a==="Online" && b==="C1(zaawansowany)"){
+else if(a==="Online" && b==="C1(zaawansowany-ang)"){
 location.replace("c1-advanced.html")
 }
-else if(a==="Stacjonarny" && b==="C1(zaawansowany)"){
+else if(a==="Stacjonarny" && b==="C1(zaawansowany-ang)"){
 location.replace("c1-advanced2.html")
 }
 
-else if(a==="Online" && b==="C2(bardzo zaawansowany)"){
+else if(a==="Online" && b==="C2(bardzo zaawansowany-ang)"){
 location.replace("c2-veryadvanced.html")
 }
-else if(a==="Stacjonarny" && b==="C2(bardzo zaawansowany)"){
+else if(a==="Stacjonarny" && b==="C2(bardzo zaawansowany-ang)"){
 location.replace("c2-veryadvanced2.html")
 }
 
