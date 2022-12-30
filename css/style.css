@@ -189,7 +189,7 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-select{width:114px;height: 40px;font-size: 12px;text-align-last: center;}
+select{width:98px;height: 40px;font-size: 11px;text-align-last: center;}
 
 #price{
   position: relative;
@@ -199,6 +199,22 @@ select{width:114px;height: 40px;font-size: 12px;text-align-last: center;}
 
 #order{background-color:red; color:white; position:absolute; margin:-16px 3px; padding:7px 8px;text-align: left;}
 
+@media only screen and (min-width:360px){
+
+  select{width:111px;height: 40px;font-size: 12px;text-align-last: center;}
+
+ }
+ @media only screen and (min-width:390px){
+
+   select{width:121px;height: 40px;font-size: 12px;text-align-last: center;}
+
+  }
+  @media only screen and (min-width:450px){
+
+    select{width:141px;height: 40px;font-size: 12px;text-align-last: center;}
+
+   }
+   
    @media only screen and (min-width:768px){
  .wrapper {
      width: 750px;
