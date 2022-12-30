@@ -1,3 +1,6 @@
+
+
+
 function courseLevel(){
           var a= document.getElementById("input").value;
               if(a==="select course"){
