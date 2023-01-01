@@ -10,6 +10,10 @@
   background-color: #e3e3e3;
 }
 
+.wrapper {
+    height: 800px;
+}
+
 .img-banner {
   display: none;
 }
@@ -218,9 +222,9 @@ select{width:98px;height: 40px;font-size: 11px;text-align-last: center;}
    @media only screen and (min-width:768px){
  .wrapper {
      width: 750px;
+     height: 1000px;
      margin: -29px auto;
-   }
-
+}
    .headline,
    .headline a,
    .headline a:link,
