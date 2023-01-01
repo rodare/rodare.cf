@@ -72,11 +72,63 @@ header nav ul li ul li ul{
   top: 0px;
 }
 
-header nav ul li:focus-within > ul, header nav ul li:hover > ul{
+header nav ul li:focus-within > ul,
+header nav ul li:hover > ul{
   display:initial;
 }
 
-@media(max-width:991px){
+#menu-bar{
+  display:none;
+}
 
+header label{
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  display: none;
+}
+
+@media(max-width:991px){
+  header{
+    padding:20px;
+  }
+  header label{
+    display: initial;
+  }
+
+  header nav{
+    position: absolute;
+    top:100%; left:0; right:0;
+    background: #fff;
+    border-top: 1px solid rgba(0,0,0,.1);
+    display: none;
+  }
+
+  header nav ul li{
+    width: 100%;
+
+  }
+  header nav ul li ul{
+    position: relative;
+    width: 100%;
+
+  }
+  header nav ul li ul li{
+    background: #eee;
+  }
+
+  header nav ul li ul li ul{
+    width: 100%;
+    left: 0;
+  }
+
+  header nav ul li:focus-within > ul,
+  header nav ul li:hover > ul{
+    display:initial;
+  }
+
+  #menu-bar:checked ~ nav{
+    display: initial;
+  }
 
 }
