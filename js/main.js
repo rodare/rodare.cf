@@ -667,7 +667,7 @@ function toggleContent60() {
   var contentId = document.getElementById("content60");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent61() {
@@ -683,7 +683,7 @@ function toggleContent62() {
   var contentId = document.getElementById("content62");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent63() {
@@ -699,7 +699,7 @@ function toggleContent64() {
   var contentId = document.getElementById("content64");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent65() {
@@ -715,7 +715,7 @@ function toggleContent66() {
   var contentId = document.getElementById("content66");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent67() {
@@ -731,7 +731,7 @@ function toggleContent68() {
   var contentId = document.getElementById("content68");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent69() {
   // Get the DOM reference
@@ -746,7 +746,7 @@ function toggleContent70() {
   var contentId = document.getElementById("content70");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent71() {
   // Get the DOM reference
@@ -761,7 +761,7 @@ function toggleContent72() {
   var contentId = document.getElementById("content72");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent73() {
   // Get the DOM reference
@@ -776,7 +776,7 @@ function toggleContent74() {
   var contentId = document.getElementById("content74");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent75() {
   // Get the DOM reference
@@ -791,7 +791,7 @@ function toggleContent76() {
   var contentId = document.getElementById("content76");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent77() {
@@ -807,7 +807,7 @@ function toggleContent78() {
   var contentId = document.getElementById("content78");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent79() {
@@ -823,7 +823,7 @@ function toggleContent80() {
   var contentId = document.getElementById("toggleContent80");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent81() {
@@ -839,7 +839,7 @@ function toggleContent82() {
   var contentId = document.getElementById("content82");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent83() {
@@ -855,7 +855,7 @@ function toggleContent84() {
   var contentId = document.getElementById("content84");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent85() {
   // Get the DOM reference
@@ -870,7 +870,7 @@ function toggleContent86() {
   var contentId = document.getElementById("content86");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent87() {
@@ -886,7 +886,7 @@ function toggleContent88() {
   var contentId = document.getElementById("content88");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent89() {
   // Get the DOM reference
@@ -901,7 +901,7 @@ function toggleContent90() {
   var contentId = document.getElementById("content90");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent91() {
   // Get the DOM reference
@@ -916,7 +916,7 @@ function toggleContent92() {
   var contentId = document.getElementById("content92");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent93() {
@@ -932,7 +932,7 @@ function toggleContent94() {
   var contentId = document.getElementById("content94");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent95() {
   // Get the DOM reference
@@ -947,5 +947,5 @@ function toggleContent96() {
   var contentId = document.getElementById("content96");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }

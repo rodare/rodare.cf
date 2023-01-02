@@ -1,57 +1,87 @@
 <!DOCTYPE html>
-  <html lang="en">
-      <head>
-          <meta charset="utf-8">
-          <title>Rodare</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <link rel="stylesheet" href="css/style.css">
-          <script type="text/javascript" src="js/main.js"></script>
-      </head>
-      <body>
-          <img class="img-banner" src="images/banner2b.jpg" alt="books banner">
-            <div class="wrapper">
-  <div class="translate">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- custom css file -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">Rodare</a>
+
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar">Menu</label>
+
+    <img class="img-banner" src="images/banner2b.jpg" alt="libros">
+    <img class="img-banner2" src="images/banner4.jpg" alt="libros2">
+
+    <div class="translate">
                   <!-- GTranslate: https://gtranslate.io/ -->
                   <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="English" /></a>
                   <a href="es/spanish-a1.html" onclick="doGTranslate('en|es');return false;" title="Spanish" class="gflag nturl" style="background-position:-600px -200px;"><img src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="Spanish" /></a>
                   <a href="pl/spanish-a1.html" onclick="doGTranslate('es|pl');return false;" title="Polish" class="gflag nturl" style="background-position:-200px -200px;"><img src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="Polish" /></a>
 
-                  <style type="text/css">
+      </div>
+      <!-- end of GTranslate-->
 
-                  a.gflag {vertical-align:middle;font-size:16px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/16.png);}
-                  a.gflag img {border:0;}
-                  a.gflag:hover {background-image:url(//gtranslate.net/flags/16a.png);}
-                  #goog-gt-tt {display:none !important;}
-                  .goog-te-banner-frame {display:none !important;}
-                  .goog-te-menu-value:hover {text-decoration:none !important;}
-                  body {top:0 !important;}
-                  #google_translate_element2 {display:none!important;}
 
-                  </style>
-  </div>
+    <nav class="dropdown">
+                    <ul>
+                      <li><a href="index.html">home</a></li>
+                      <li><a href="https://rodare1.blogspot.com/">blog</a></li>
+                      <li><a href="#">courses +</a>
+                        <ul>
+                          <li><a href="#">spanish</a>
+                            <ul>
+                              <li><a href="spanish-a1.html">A1</a></li>
+                              <li><a href="spanish-a2.html">A2</a></li>
+                              <li><a href="spanish-b1.html">B1</a></li>
+                              <li><a href="spanish-b2.html">B2</a></li>
+                              <li><a href="spanish-c1.html">C1</a></li>
+                              <li><a href="spanish-c2.html">C2</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#">japanese</a>
+                            <ul>
+                              <li><a href="japanese-a1.html">A1</a></li>
+                              <li><a href="japanese-a2.html">A2</a></li>
+                              <li><a href="japanese-b1.html">B1</a></li>
+                              <li><a href="japanese-b2.html">B2</a></li>
+                              <li><a href="japanese-c1.html">C1</a></li>
+                              <li><a href="japanese-c2.html">C2</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#">english</a>
+                            <ul>
+                              <li><a href="english-a1.html">A1</a></li>
+                              <li><a href="english-a2.html">A2</a></li>
+                              <li><a href="english-b1.html">B1</a></li>
+                              <li><a href="english-b2.html">B2</a></li>
+                              <li><a href="english-c1.html">C1</a></li>
+                              <li><a href="english-c2.html">C2</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#">piano</a>
+                            <ul>
+                              <li><a href="pianoBeg.html">beginner</a></li>
+                              <li><a href="pianoBas.html">basic</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="calendar.html">calendar</a></li>
+                      <li><a href="signup.html">sign-up</a></li>
+                    </ul>
 
-                <h2 class="headline" data-left="2.05%">
-                <a href="index.html">Rodare</a>
+                  </nav>
+</header>
 
-                </h2>
-                <img class="img-banner2" src="images/banner4.jpg" alt="ogród">
-                <ul class="elmenu">
-                    <li class="elmenu"><a href="index.html">Home</a></li>
-                    <li class="elmenu"><a href="https://rodare1.blogspot.com/">Blog</a></li>
-                    <li class="dropdown elmenu">
-                      <a href="courses.html" class="dropbtn elmenu">Courses</a>
-                      <div class="dropdown-content elmenu">
-                        <a href="spanish.html" class="elmenu">Spanish</a>
-                        <a href="japanese.html" class="elmenu">Japanese</a>
-                        <a href="english.html" class="elmenu">English</a>
-                        <a href="piano.html" class="elmenu">Piano</a>
-                      </div>
-                    </li>
-                    <li class="elmenu"><a href="calendar.html">Calendar</a></li>
-                    <li class="elmenu"><a href="signup.html">Sign-up</a></li>
-                </ul>
-          <article class="img-info">
-          <div id="main-content">
+<div class="wrapper">
+  <article class="img-info">
             <p><h1>Sign-up for a course</h1></p>
             <div "course-selection" style="display: inline;">
             <select id="input" onchange="courseLevel()">
@@ -78,7 +108,9 @@
                  </div>
              <p><h1>English C2(very advanced) Stationary</h1></p>
               </div>
-            </article>
+  </article>
+<script src="js/main.js"></script>
+
           </div>
 
           </body>

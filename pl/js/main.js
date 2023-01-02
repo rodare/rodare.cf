@@ -1,19 +1,22 @@
+
+
+
 function courseLevel(){
           var a= document.getElementById("input").value;
-              if(a==="wybierz kurs"){
-            var arr=["wybierz poziom"];
+              if(a==="select course"){
+            var arr=["select level"];
               }
-              else if(a==="Hiszpański"){
-            var arr=["wybierz poziom","A1(wprowadzający)", "A2(podstawowy)", "B1(średniozaawansowany)", "B2(prawie-zaawansowany)", "C1(zaawansowany)", "C2(bardzo zaawansowany)"];
+              else if(a==="Spanish"){
+            var arr=["select level","A1(iniciación)", "A2(básico)", "B1(intermedio)", "B2(intermedio alto)", "C1(avanzado)", "C2(muy avanzado)"];
               }
-              else if(a==="Japoński"){
-            var arr=["wybierz poziom","A1(入門)", "A2(N5)", "B1(N4)", "B2(N3)", "C1(N2)", "C2(N1)"];
+              else if(a==="Japanese"){
+            var arr=["select level","A1(入門)", "A2(N5)", "B1(N4)", "B2(N3)", "C1(N2)", "C2(N1)"];
                     }
-              else if(a==="Angielski"){
-            var arr=["wybierz poziom","A1(wprowadzający-ang)", "A2(podstawowy-ang)", "B1(średniozaawansowany-ang)", "B2(prawie-zaawansowany-ang)", "C1(zaawansowany-ang)", "C2(bardzo zaawansowany-ang)"];
+              else if(a==="English"){
+            var arr=["select level","A1(introductory)", "A2(basic)", "B1(intermediate)", "B2(upper-intermediate)", "C1(advanced)", "C2(very advanced)"];
                       }
-              else if(a==="Pianino"){
-            var arr=["wybierz poziom","Początkujący", "Podstawowy"];
+              else if(a==="Piano"){
+            var arr=["select level","Beginner", "Intermediate"];
                       }
               else
             var string="";
@@ -27,11 +30,11 @@ function courseLevel(){
 
 function levelModality(){
   var a= document.getElementById("output").value;
-    if (a==="wybierz poziom"){
-      var arr=["wybierz tryb"];
+    if (a==="select level"){
+      var arr=["select modality"];
     }
     else {
-var arr=["wybierz tryb", "Online", "Stacjonarny"];
+var arr=["select modality", "Online", "Stationary"];
     }
 var string="";
 for(i=0;i<arr.length;i++){
@@ -44,147 +47,147 @@ function courseRedirect(){
 var a= document.getElementById("output2").value;
 var b= document.getElementById("output").value;
 
-if (a==="wybierz poziom" & b==="wybierz kurs"){
-  var arr=["wybierz tryb"];
+if (a==="select level" & b==="select course"){
+  var arr=["select modality"];
 }
 
-else if(a==="Online" && b==="A1(wprowadzający)"){
+else if(a==="Online" && b==="A1(iniciación)"){
 location.replace("a1-iniciacion.html")
 }
-else if(a==="Stacjonarny" && b==="A1(wprowadzający)"){
+else if(a==="Stationary" && b==="A1(iniciación)"){
 location.replace("a1-iniciacion2.html")
 }
 
-else if(a==="Online" && b==="A2(podstawowy)"){
+else if(a==="Online" && b==="A2(básico)"){
 location.replace("a2-basico.html")
 }
-else if(a==="Stacjonarny" && b==="A2(podstawowy)"){
+else if(a==="Stationary" && b==="A2(básico)"){
 location.replace("a2-basico2.html")
 }
 
-else if(a==="Online" && b==="B1(średniozaawansowany)"){
+else if(a==="Online" && b==="B1(intermedio)"){
 location.replace("b1-intermedio.html")
 }
-else if(a==="Stacjonarny" && b==="B1(średniozaawansowany)"){
+else if(a==="Stationary" && b==="B1(intermedio)"){
 location.replace("b1-intermedio2.html")
 }
 
-else if(a==="Online" && b==="B2(prawie-zaawansowany)"){
+else if(a==="Online" && b==="B2(intermedio alto)"){
 location.replace("b2-intermedioalto.html")
 }
-else if(a==="Stacjonarny" && b==="B2(prawie-zaawansowany)"){
+else if(a==="Stationary" && b==="B2(intermedio alto)"){
 location.replace("b2-intermedioalto2.html")
 }
 
-else if(a==="Online" && b==="C1(zaawansowany)"){
+else if(a==="Online" && b==="C1(avanzado)"){
 location.replace("c1-avanzado.html")
 }
-else if(a==="Stacjonarny" && b==="C1(zaawansowany)"){
+else if(a==="Stationary" && b==="C1(avanzado)"){
 location.replace("c1-avanzado2.html")
 }
 
-else if(a==="Online" && b==="C2(bardzo zaawansowany)"){
+else if(a==="Online" && b==="C2(muy avanzado)"){
 location.replace("c2-muyavanzado.html")
 }
-else if(a==="Stacjonarny" && b==="C2(bardzo zaawansowany)"){
+else if(a==="Stationary" && b==="C2(muy avanzado)"){
 location.replace("c2-muyavanzado2.html")
 }
 
-else if(a==="Online" && b==="A1(wprowadzający-ang)"){
+else if(a==="Online" && b==="A1(introductory)"){
 location.replace("a1-introductory.html")
 }
-else if(a==="Stacjonarny" && b==="A1(wprowadzający-ang)"){
+else if(a==="Stationary" && b==="A1(introductory)"){
 location.replace("a1-introductory2.html")
 }
 
-else if(a==="Online" && b==="A2(podstawowy-ang)"){
+else if(a==="Online" && b==="A2(basic)"){
 location.replace("a2-basic.html")
 }
-else if(a==="Stacjonarny" && b==="A2(podstawowy-ang)"){
+else if(a==="Stationary" && b==="A2(basic)"){
 location.replace("a2-basic2.html")
 }
 
-else if(a==="Online" && b==="B1(średniozaawansowany-ang)"){
+else if(a==="Online" && b==="B1(intermediate)"){
 location.replace("b1-intermediate.html")
 }
-else if(a==="Stacjonarny" && b==="B1(średniozaawansowany-ang)"){
+else if(a==="Stationary" && b==="B1(intermediate)"){
 location.replace("b1-intermediate2.html")
 }
 
-else if(a==="Online" && b==="B2(prawie-zaawansowany-ang)"){
+else if(a==="Online" && b==="B2(upper-intermediate)"){
 location.replace("b2-upperintermediate.html")
 }
-else if(a==="Stacjonarny" && b==="B2(prawie-zaawansowany-ang)"){
+else if(a==="Stationary" && b==="B2(upper-intermediate)"){
 location.replace("b2-upperintermediate2.html")
 }
 
-else if(a==="Online" && b==="C1(zaawansowany-ang)"){
+else if(a==="Online" && b==="C1(advanced)"){
 location.replace("c1-advanced.html")
 }
-else if(a==="Stacjonarny" && b==="C1(zaawansowany-ang)"){
+else if(a==="Stationary" && b==="C1(advanced)"){
 location.replace("c1-advanced2.html")
 }
 
-else if(a==="Online" && b==="C2(bardzo zaawansowany-ang)"){
+else if(a==="Online" && b==="C2(very advanced)"){
 location.replace("c2-veryadvanced.html")
 }
-else if(a==="Stacjonarny" && b==="C2(bardzo zaawansowany-ang)"){
+else if(a==="Stationary" && b==="C2(very advanced)"){
 location.replace("c2-veryadvanced2.html")
 }
 
 else if(a==="Online" && b==="A1(入門)"){
 location.replace("a1-nyuumon.html")
 }
-else if(a==="Stacjonarny" && b==="A1(入門)"){
+else if(a==="Stationary" && b==="A1(入門)"){
 location.replace("a1-nyuumon2.html")
 }
 
 else if(a==="Online" && b==="A2(N5)"){
 location.replace("a2-n5.html")
 }
-else if(a==="Stacjonarny" && b==="A2(N5)"){
+else if(a==="Stationary" && b==="A2(N5)"){
 location.replace("a2-n52.html")
 }
 
 else if(a==="Online" && b==="B1(N4)"){
 location.replace("b1-n4.html")
 }
-else if(a==="Stacjonarny" && b==="B1(N4)"){
+else if(a==="Stationary" && b==="B1(N4)"){
 location.replace("b1-n42.html")
 }
 
 else if(a==="Online" && b==="B2(N3)"){
 location.replace("b2-n3.html")
 }
-else if(a==="Stacjonarny" && b==="B2(N3)"){
+else if(a==="Stationary" && b==="B2(N3)"){
 location.replace("b2-n32.html")
 }
 
 else if(a==="Online" && b==="C1(N2)"){
 location.replace("c1-n2.html")
 }
-else if(a==="Stacjonarny" && b==="C1(N2)"){
+else if(a==="Stationary" && b==="C1(N2)"){
 location.replace("c1-n22.html")
 }
 
 else if(a==="Online" && b==="C2(N1)"){
 location.replace("c2-n1.html")
 }
-else if(a==="Stacjonarny" && b==="C2(N1)"){
+else if(a==="Stationary" && b==="C2(N1)"){
 location.replace("c2-n12.html")
 }
 
-else if(a==="Online" && b==="Początkujący"){
+else if(a==="Online" && b==="Beginner"){
 location.replace("beginner.html")
 }
-else if(a==="Stacjonarny" && b==="Początkujący"){
+else if(a==="Stationary" && b==="Beginner"){
 location.replace("beginner2.html")
 }
 
-else if(a==="Online" && b==="Podstawowy"){
+else if(a==="Online" && b==="Intermediate"){
 location.replace("intermediate.html")
 }
-else if(a==="Stacjonarny" && b==="Podstawowy"){
+else if(a==="Stationary" && b==="Intermediate"){
 location.replace("intermediate2.html")
 }
 
@@ -664,7 +667,7 @@ function toggleContent60() {
   var contentId = document.getElementById("content60");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent61() {
@@ -680,7 +683,7 @@ function toggleContent62() {
   var contentId = document.getElementById("content62");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent63() {
@@ -696,7 +699,7 @@ function toggleContent64() {
   var contentId = document.getElementById("content64");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent65() {
@@ -712,7 +715,7 @@ function toggleContent66() {
   var contentId = document.getElementById("content66");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent67() {
@@ -728,7 +731,7 @@ function toggleContent68() {
   var contentId = document.getElementById("content68");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent69() {
   // Get the DOM reference
@@ -743,7 +746,7 @@ function toggleContent70() {
   var contentId = document.getElementById("content70");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent71() {
   // Get the DOM reference
@@ -758,7 +761,7 @@ function toggleContent72() {
   var contentId = document.getElementById("content72");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent73() {
   // Get the DOM reference
@@ -773,7 +776,7 @@ function toggleContent74() {
   var contentId = document.getElementById("content74");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent75() {
   // Get the DOM reference
@@ -788,7 +791,7 @@ function toggleContent76() {
   var contentId = document.getElementById("content76");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent77() {
@@ -804,7 +807,7 @@ function toggleContent78() {
   var contentId = document.getElementById("content78");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent79() {
@@ -820,7 +823,7 @@ function toggleContent80() {
   var contentId = document.getElementById("toggleContent80");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent81() {
@@ -836,7 +839,7 @@ function toggleContent82() {
   var contentId = document.getElementById("content82");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent83() {
@@ -852,7 +855,7 @@ function toggleContent84() {
   var contentId = document.getElementById("content84");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent85() {
   // Get the DOM reference
@@ -867,7 +870,7 @@ function toggleContent86() {
   var contentId = document.getElementById("content86");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent87() {
@@ -883,7 +886,7 @@ function toggleContent88() {
   var contentId = document.getElementById("content88");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent89() {
   // Get the DOM reference
@@ -898,7 +901,7 @@ function toggleContent90() {
   var contentId = document.getElementById("content90");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent91() {
   // Get the DOM reference
@@ -913,7 +916,7 @@ function toggleContent92() {
   var contentId = document.getElementById("content92");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 
 function toggleContent93() {
@@ -929,7 +932,7 @@ function toggleContent94() {
   var contentId = document.getElementById("content94");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
 function toggleContent95() {
   // Get the DOM reference
@@ -944,5 +947,5 @@ function toggleContent96() {
   var contentId = document.getElementById("content96");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
-contentId.style.display = "block"; window.scrollBy(0, 500);
+contentId.style.display = "block"; window.scrollBy(0, 150);
 }
