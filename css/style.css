@@ -191,7 +191,7 @@ td, th {
   border: 1px solid black;
   text-align: left;
   padding: 2px;
-  font-size: 17px;
+  font-size: 13px;
 }
 
 tr:nth-child(even){
