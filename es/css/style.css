@@ -60,14 +60,14 @@ header{
 
 header .logo{
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 38px;
   font-weight: normal;
-  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: -1px 1px 0px rgba(0,0,0,0.3);
   color: #FA6114 !important;
   white-space: nowrap;
   padding: 0px 0px 0px 60px;
-
 }
+
 header nav ul{
   list-style: none;
 }
@@ -92,7 +92,7 @@ header nav ul li a:hover{
 header nav ul li ul{
   position: absolute;
   left:0;
-  width:200px;
+  width:142px;
   background:dimgrey;
   display: none;
 }
@@ -103,7 +103,7 @@ header nav ul li ul li{
 }
 
 header nav ul li ul li ul{
-  left:200px;
+  left:142px;
   top: 0px;
 }
 
@@ -131,11 +131,19 @@ header label{
   right:572px;
 }
 .img-info p {
-  padding: 0px 0px 0px;
+  padding: 6px 0px;
   font-family: arial;
   font-size: 18px;
   color: #111;
   line-height: 24px;
+}
+
+.img-info h2 {
+  padding: 25px 0px 16px;
+  font-family: arial;
+  font-size: 18px;
+  color: #111;
+  line-height: 0px;
 }
 
 .responsive{
@@ -175,7 +183,7 @@ td, th {
   }
 
   header .logo{
-    padding: 0px 0px 0px 5%;
+    padding: 0px 0px 0px 4%;
 
   }
   header label{
