@@ -175,9 +175,10 @@ select{
 
 #order{
   background-color:red;
-  color:white; position:absolute;
-  margin:-16px 3px;
-  padding:7px 8px;
+  color:white;
+  position:relative;
+  margin:-16px -2px;
+  padding:7px 2px;
   text-align: left;
 
 }
