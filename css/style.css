@@ -57,8 +57,24 @@ header{
   z-index: 1000;
 
 }
+header .logo {
+  font-size: 38px;
+  color: #FFFFD2;
+  text-align: center;
+  animation: glow 2s ease-in-out infinite alternate;
+  position: relative;
+  padding: 0px 0px 0px 4%;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #696969, 0 0 20px #696969, 0 0 30px #696969, 0 0 40px #696969, 0 0 50px #696969;
+  }
 
-header .logo{
+  to {
+    text-shadow: 0 0 10px #b84308, 0 0 20px #b84308, 0 0 30px #b84308, 0 0 40px #b84308, 0 0 50px #b84308, 0 0 60px #b84308;
+  }
+}
+/* header .logo{
   font-weight: bolder;
   font-size: 38px;
   font-weight: normal;
@@ -66,7 +82,8 @@ header .logo{
   color: #FA6114 !important;
   white-space: nowrap;
   padding: 0px 0px 0px 60px;
-}
+} */
+
 
 header nav ul{
   list-style: none;
@@ -212,7 +229,8 @@ tr:nth-child(even){
 
   header .logo{
     padding: 0px 0px 0px 4%;
-
+    position: relative;
+    left: 0px;
   }
   header label{
     display: initial;
