@@ -182,10 +182,10 @@ location.replace("beginner2.html")
 }
 
 else if(a==="Online" && b==="Podstawowy"){
-location.replace("intermediate.html")
+location.replace("basic.html")
 }
 else if(a==="Stacjonarny" && b==="Podstawowy"){
-location.replace("intermediate2.html")
+location.replace("basic2.html")
 }
 
 

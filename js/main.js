@@ -16,7 +16,7 @@ function courseLevel(){
             var arr=["select level","A1(introductory)", "A2(basic)", "B1(intermediate)", "B2(upper-intermediate)", "C1(advanced)", "C2(very advanced)"];
                       }
               else if(a==="Piano"){
-            var arr=["select level","Beginner", "Intermediate"];
+            var arr=["select level","Beginner", "Basic"];
                       }
               else
             var string="";
@@ -185,10 +185,10 @@ location.replace("beginner2.html")
 }
 
 else if(a==="Online" && b==="Intermediate"){
-location.replace("intermediate.html")
+location.replace("basic.html")
 }
 else if(a==="Stationary" && b==="Intermediate"){
-location.replace("intermediate2.html")
+location.replace("basic2.html")
 }
 
 
