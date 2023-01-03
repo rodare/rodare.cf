@@ -131,7 +131,7 @@ header label{
   right:572px;
 }
 .img-info p {
-  padding: 6px 0px;
+  padding: 11px 0px;
   font-family: arial;
   font-size: 18px;
   color: #111;
@@ -139,7 +139,7 @@ header label{
 }
 
 .img-info h2 {
-  padding: 25px 0px 16px;
+  padding: 0px 0px 16px;
   font-family: arial;
   font-size: 18px;
   color: #111;
@@ -179,7 +179,7 @@ td, th {
 @media(max-width:991px){
   header{
     padding:0px;
-    top:73px;
+    top:43px;
   }
 
   header .logo{
@@ -235,7 +235,7 @@ td, th {
       display: block;
       width: 100%;
       padding-bottom: 8px;
-      height: 80px;
+      height: 50px;
       position: fixed;
       top:0px;
     }
@@ -248,7 +248,7 @@ td, th {
     .translate{
       text-align:right;
       position:fixed;
-      top:82px;
+      top:57px;
       right:90px;
     }
 
