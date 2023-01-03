@@ -93,45 +93,45 @@ else if(a==="Estacionario" && b==="C2(muy avanzado)"){
 location.replace("c2-muyavanzado2.html")
 }
 
-else if(a==="Online" && b==="A1(introductorio)"){
+else if(a==="Online" && b==="A1(introductory)"){
 location.replace("a1-introductory.html")
 }
-else if(a==="Estacionario" && b==="A1(introductorio)"){
+else if(a==="Estacionario" && b==="A1(introductory)"){
 location.replace("a1-introductory2.html")
 }
 
-else if(a==="Online" && b==="A2(básico)"){
+else if(a==="Online" && b==="A2(basic)"){
 location.replace("a2-basic.html")
 }
-else if(a==="Estacionario" && b==="A2(básico)"){
+else if(a==="Estacionario" && b==="A2(basic)"){
 location.replace("a2-basic2.html")
 }
 
-else if(a==="Online" && b==="B1(intermedio)"){
+else if(a==="Online" && b==="B1(intermediate)"){
 location.replace("b1-intermediate.html")
 }
-else if(a==="Estacionario" && b==="B1(intermedio)"){
+else if(a==="Estacionario" && b==="B1(intermediate)"){
 location.replace("b1-intermediate2.html")
 }
 
-else if(a==="Online" && b==="B2(intermedio alto)"){
+else if(a==="Online" && b==="B2(upper-intermediate)"){
 location.replace("b2-upperintermediate.html")
 }
-else if(a==="Estacionario" && b==="B2(intermedio alto)"){
+else if(a==="Estacionario" && b==="B2(upper-intermediate)"){
 location.replace("b2-upperintermediate2.html")
 }
 
-else if(a==="Online" && b==="C1(avanzado)"){
+else if(a==="Online" && b==="C1(advanced)"){
 location.replace("c1-advanced.html")
 }
-else if(a==="Estacionario" && b==="C1(avanzado)"){
+else if(a==="Estacionario" && b==="C1(advanced)"){
 location.replace("c1-advanced2.html")
 }
 
-else if(a==="Online" && b==="C2(muy avanzado)"){
+else if(a==="Online" && b==="C2(very advanced)"){
 location.replace("c2-veryadvanced.html")
 }
-else if(a==="Estacionario" && b==="C2(muy avanzado)"){
+else if(a==="Estacionario" && b==="C2(very advanced)"){
 location.replace("c2-veryadvanced2.html")
 }
 

@@ -10,7 +10,7 @@ function courseLevel(){
             var arr=["wybierz poziom","A1(入門)", "A2(N5)", "B1(N4)", "B2(N3)", "C1(N2)", "C2(N1)"];
                     }
               else if(a==="Angielski"){
-            var arr=["wybierz poziom","A1(wprowadzający-ang)", "A2(podstawowy-ang)", "B1(średniozaawansowany-ang)", "B2(prawie-zaawansowany-ang)", "C1(zaawansowany-ang)", "C2(bardzo zaawansowany-ang)"];
+                var arr=["wybierz poziom","A1", "A2", "B1", "B2", "C1", "C2"];
                       }
               else if(a==="Pianino"){
             var arr=["wybierz poziom","Początkujący", "Podstawowy"];
