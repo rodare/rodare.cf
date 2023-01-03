@@ -13,7 +13,7 @@ function courseLevel(){
         var arr=["seleccionar nivel","A1(入門)", "A2(N5)", "B1(N4)", "B2(N3)", "C1(N2)", "C2(N1)"];
                 }
           else if(a==="Inglés"){
-        var arr=["seleccionar nivel","A1(introductorio)", "A2(básico)", "B1(intermedio)", "B2(intermedio alto)", "C1(avanzado)", "C2(muy avanzado)"];
+            var arr=["seleccionar nivel","A1(introductory)", "A2(basic)", "B1(intermediate)", "B2(upper-intermediate)", "C1(advanced)", "C2(very advanced)"];
                   }
           else if(a==="Piano"){
         var arr=["seleccionar nivel","Principiante", "Intermedio"];
