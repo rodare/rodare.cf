@@ -50,7 +50,7 @@ header{
   top:201px; left:0;right:0;
   background: dimgrey;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
-  padding: 0px 0%;
+  padding: 0px 3% 0% 0%;
   display: flex;
   align-items: center;
   justify-content: space-between;
