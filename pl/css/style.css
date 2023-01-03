@@ -150,6 +150,7 @@ header label{
     /* height: 0; */
     padding-bottom: 56.26%;
     position: relative;
+    overflow-x:auto;
 }
 .responsive iframe{
     position: absolute;
@@ -168,6 +169,23 @@ select{
   text-align-last: center;
 }
 
+.course-selection{
+  text-align: center;
+}
+
+#order{
+  background-color:red;
+  color:white; position:absolute;
+  margin:-16px 3px;
+  padding:7px 8px;
+  text-align: left;
+
+}
+
+table{
+  width:100% !important;
+}
+
 td, th {
   border: 1px solid black;
   text-align: left;
@@ -175,9 +193,10 @@ td, th {
   font-size: 17px;
 }
 
-.course-selection{
-  text-align: center;
+tr:nth-child(even){
+  background-color: #f2f2f2;
 }
+
 @media(max-width:991px){
   header{
     padding:0px;
