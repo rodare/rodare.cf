@@ -12,7 +12,7 @@ body{
   background: url(../images/fachada.jpg) no-repeat;
   background-size: cover;
   background-position: center;*/
-  background-color: rgba(0,0,0,.1);
+  background-color: rgb(199 146 92 / 14%);
 }
 
 li{
@@ -48,7 +48,7 @@ body {top:0 !important;}
 header{
   position:fixed;
   top:201px; left:0;right:0;
-  background: dimgrey;
+  background: #6a6057;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
   padding: 0px 3% 0% 0%;
   display: flex;
@@ -135,7 +135,7 @@ header nav ul li:hover > ul{
 
 header label{
   font-size: 20px;
-  color: #FA6114;
+  color: #ffba68;
   cursor: pointer;
   display: none;
   padding-right: 96px;
@@ -145,7 +145,7 @@ header label{
   text-align:right;
   position:fixed;
   top:226px;
-  right:572px;
+  right:587px;
 }
 .img-info p {
   padding: 4px 0px;
