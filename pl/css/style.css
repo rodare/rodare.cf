@@ -20,6 +20,22 @@ li{
   list-style: none;
 }
 
+.more{
+   display: none;
+}
+.post{
+   color: #9999a0;
+   font-size: 18px;
+   text-align: justify;
+   line-height: 25px;
+   font-family: 'Work Sans',sans-serif;
+
+}
+.post:not(:last-child){
+   margin-bottom: 30px;
+}
+
+
 a.gflag {vertical-align:middle;font-size:16px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/16.png);}
 a.gflag img {border:0;}
 a.gflag:hover {background-image:url(//gtranslate.net/flags/16a.png);}
@@ -237,6 +253,43 @@ tr:nth-child(even){
     max-width: 90vw;
     width: 100% !important;
 }
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#more {display: none;}
 
 @media(max-width:991px){
   header{
