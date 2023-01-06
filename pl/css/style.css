@@ -387,4 +387,9 @@ tr:nth-child(even){
         display:list-item;
       }
 
+      .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+
 }

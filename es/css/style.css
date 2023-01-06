@@ -35,7 +35,6 @@ li{
    margin-bottom: 30px;
 }
 
-
 a.gflag {vertical-align:middle;font-size:16px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/16.png);}
 a.gflag img {border:0;}
 a.gflag:hover {background-image:url(//gtranslate.net/flags/16a.png);}
@@ -386,6 +385,11 @@ tr:nth-child(even){
 
       select{
         display:list-item;
+      }
+      
+      .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
       }
 
 }
