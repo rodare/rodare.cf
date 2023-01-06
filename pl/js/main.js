@@ -818,9 +818,9 @@ function toggleContent79() {
 contentId.style.display = "block"; window.scrollBy(0, 200);
 }
 
-function toggleContent80() {
+function toggleContent80a() {
   // Get the DOM reference
-  var contentId = document.getElementById("toggleContent80");
+  var contentId = document.getElementById("content80a");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
 contentId.style.display = "block"; window.scrollBy(0, 150);

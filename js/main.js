@@ -1,5 +1,15 @@
-
-
+$(document).ready(function(){
+   $(".read").click(function(){
+      $(this).prev().toggle();
+      $(this).siblings('.dots').toggle();
+      if($(this).text()=='read more'){
+	$(this).text('read less');
+      }
+      else{
+	$(this).text('read more');
+      }
+   });
+});
 
 function courseLevel(){
           var a= document.getElementById("input").value;
@@ -818,9 +828,9 @@ function toggleContent79() {
 contentId.style.display = "block"; window.scrollBy(0, 200);
 }
 
-function toggleContent80() {
+function toggleContent80aaa() {
   // Get the DOM reference
-  var contentId = document.getElementById("toggleContent80");
+  var contentId = document.getElementById("content80aa");
   // Toggle
   contentId.style.display == "block" ? contentId.style.display = "none" :
 contentId.style.display = "block"; window.scrollBy(0, 150);
