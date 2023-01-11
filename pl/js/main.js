@@ -962,3 +962,11 @@ function toggleContent96() {
   contentId.style.display == "block" ? contentId.style.display = "none" :
 contentId.style.display = "block"; window.scrollBy(0, 150);
 }
+
+function toggleContent97() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content97");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block"; window.scrollBy(0, 150);
+}
