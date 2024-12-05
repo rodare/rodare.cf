@@ -975,3 +975,28 @@ function toggleContent98() {
   contentId.style.display == "block" ? contentId.style.display = "none" :
 contentId.style.display = "block"; window.scrollBy(0, 150);
 }
+
+function toggleContent99() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content99");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block"; window.scrollBy(0, 150);
+}
+
+
+function toggleContent100() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content100");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block"; window.scrollBy(0, 150);
+}
+
+function toggleContent101() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content101");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block"; window.scrollBy(0, 150);
+}
