@@ -1008,3 +1008,11 @@ function toggleContent102() {
   contentId.style.display == "block" ? contentId.style.display = "none" :
 contentId.style.display = "block"; window.scrollBy(0, 150);
 }
+
+function toggleContent103() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content103");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block"; window.scrollBy(0, 150);
+}
