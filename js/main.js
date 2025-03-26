@@ -1048,3 +1048,11 @@ function toggleContent107() {
   contentId.style.display == "block" ? contentId.style.display = "none" :
 contentId.style.display = "block"; window.scrollBy(0, 150);
 }
+
+function toggleContent108() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content108");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block"; window.scrollBy(0, 150);
+}
