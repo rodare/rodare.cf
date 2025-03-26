@@ -1024,3 +1024,27 @@ function toggleContent104() {
   contentId.style.display == "block" ? contentId.style.display = "none" :
 contentId.style.display = "block"; window.scrollBy(0, 150);
 }
+
+function toggleContent105() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content105");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block"; window.scrollBy(0, 150);
+}
+
+function toggleContent106() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content106");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block"; window.scrollBy(0, 150);
+}
+
+function toggleContent107() {
+  // Get the DOM reference
+  var contentId = document.getElementById("content107");
+  // Toggle
+  contentId.style.display == "block" ? contentId.style.display = "none" :
+contentId.style.display = "block"; window.scrollBy(0, 150);
+}
