@@ -159,8 +159,8 @@ header label{
 .translate{
   text-align:right;
   position:fixed;
-  top:74px;
-  right:615px;
+  top:125px;
+  right:55px;
 }
 
 
@@ -293,6 +293,10 @@ tr:nth-child(even){
 
 #more {display: none;}
 
+.search-container{
+
+}
+
 @media(max-width:991px){
   header{
     padding:0px;
@@ -376,8 +380,8 @@ tr:nth-child(even){
     .translate{
       text-align:right;
       position:fixed;
-      top:57px;
-      right:90px;
+      top:96px;
+      right:55px;
     }
     .responsive{
         width: 100%;
@@ -394,6 +398,10 @@ tr:nth-child(even){
       .leftcolumn, .rightcolumn {
         width: 100%;
         padding: 0;
+      }
+
+      #searchBox{
+        margin-right: 7px;
       }
 
 

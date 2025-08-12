@@ -24,17 +24,15 @@
 <body>
 
 <header>
+    <a href="index.html" class="logo">Rodare</a>
 
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar">Menu</label>
 
     <img class="img-banner" src="images/banner2b.jpg" alt="libros">
-    <!-- <img class="img-banner2" src="images/banner4.jpg" alt="libros2"> -->
+    <img class="img-banner2" src="images/banner4.jpg" alt="libros2">
 
-
-</header>
-
-<div class="dropdown">
-          <a href="index.html" class="logo">Rodare</a>
-              <div class="translate">
+    <div class="translate">
                     <!-- GTranslate: https://gtranslate.io/ -->
                     <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="English" /></a>
                     <a href="es/index.html" onclick="doGTranslate('en|es');return false;" title="Spanish" class="gflag nturl" style="background-position:-600px -200px;"><img src="//gtranslate.net/flags/blank.png" height="16" width="16" alt="Spanish" /></a>
@@ -42,7 +40,9 @@
 
                   </div>
       <!-- end of GTranslate-->
-    <nav>
+
+
+    <nav class="dropdown">
                     <ul>
                       <li><a href="index.html">home</a></li>
                       <li><a href="blog.html">blog</a></li>
@@ -91,11 +91,16 @@
                     </ul>
 
                   </nav>
+  
+        <div class="search-container">
+        <input type="text" id="searchBox" placeholder="Type to search..." style="width: 300px; padding: 5px;">
 
-</div>
+      </div>
+</header>
 
-<div class="wrapper">
+<main class="wrapper">
   <div class="img-info">
+ <div id="results"></div>
 
     <h2>About the site</h2>
                          <p>
@@ -109,5 +114,8 @@
     </div>
   </div>
 </div>
+<script src="js/main.js"></script>
+<script src="js/highlight-search.js"></script>
+
 </body>
 </html>

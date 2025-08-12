@@ -93,10 +93,16 @@
                     </ul>
 
                   </nav>
+  
+        <div class="search-container">
+        <input type="text" id="searchBox" placeholder="Type to search..." style="width: 300px; padding: 5px;">
+
+      </div>
 </header>
 
-<div class="wrapper">
+<main class="wrapper">
   <article class="img-info">
+<div id="results"></div>
             <p><h1>Zapisz się na kurs</h1></p>
             <div "course-selection" style="display: inline;">
             <select id="input" onchange="courseLevel()">
@@ -124,7 +130,10 @@
               <p><h2>Japoński C1(N2) Stacjonarny</h2></p>
               </div>
   </article>
+</main>
+
 <script src="js/main.js"></script>
+<script src="js/highlight-search.js"></script>
 
           </div>
 

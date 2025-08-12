@@ -91,10 +91,16 @@
                     </ul>
 
                   </nav>
+  
+        <div class="search-container">
+        <input type="text" id="searchBox" placeholder="Type to search..." style="width: 300px; padding: 5px;">
+
+      </div>
 </header>
 
-<div class="wrapper">
+<main class="wrapper">
   <article class="img-info">
+<div id="results"></div>
 
     <h2>Blog</h2>
 
@@ -153,32 +159,30 @@ Episodio sobre la materialización de los deseos en acciones responsables.<p>
 
 
     </div>
-        <div class="rightcolumn">
-      <div class="card">
-        <h2>About Me</h2>
-        <div class="fakeimg" style="height:100px;">Image</div>
-        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-      </div>
-      <div class="card">
-        <h3>Posts by Year</h3>
-        <a href="blog.html"><div class="fakeimg">2025</div></a><br>
-        <a href="blog2024.html"><div class="fakeimg">2024</div></a><br>
-        <a href="blog2023.html"><div class="fakeimg">2023</div></a><br>
-        <a href="blog2022.html"><div class="fakeimg">2022</div></a><br>
-
-      </div>
-      <div class="card">
-        <h3>Follow Me</h3>
-        <p>Some text..</p>
-      </div>
+      <aside class="rightcolumn">
+        <div class="card">
+          <h2>About Me</h2>
+          <div class="fakeimg" style="height:100px;">Image</div>
+          <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        </div>
+        <div class="card">
+          <h3>Posts by Year</h3>
+          <a href="blog.html"><div class="fakeimg">2025</div></a><br>
+          <a href="blog2024.html"><div class="fakeimg">2024</div></a><br>
+          <a href="blog2023.html"><div class="fakeimg">2023</div></a><br>
+          <a href="blog2022.html"><div class="fakeimg">2022</div></a><br>
+        </div>
+        <div class="card">
+          <h3>Follow Me</h3>
+          <p>Some text..</p>
+        </div>
+      </aside>
     </div>
+  </article>
+</main>
 
+<script src="js/main.js"></script>
+<script src="js/highlight-search.js"></script>
 
-
-
-  </div>
-    </article>
-    <script src="js/main.js"></script>
-</div>
 </body>
 </html>

@@ -91,10 +91,16 @@
                     </ul>
 
                   </nav>
+  
+        <div class="search-container">
+        <input type="text" id="searchBox" placeholder="Type to search..." style="width: 300px; padding: 5px;">
+
+      </div>
 </header>
 
-<div class="wrapper">
+<main class="wrapper">
   <article class="img-info">
+<div id="results"></div>
 
     <h2>Blog Posts 2022</h2>
 
@@ -145,7 +151,38 @@
 
   </div>
     </article>
-    <script src="js/main.js"></script>
+</main>
+    </main>
+
+<script src="js/main.js"></script>
+<script src="js/highlight-search.js"></script>
 </div>
+
+<!-- Search highlight script -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const highlightTerm = params.get("highlight");
+  
+  if (highlightTerm) {
+    const regex = new RegExp(`(${highlightTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, "gi");
+    const mainEl = document.querySelector("main");
+    if (mainEl) {
+      mainEl.innerHTML = mainEl.innerHTML.replace(regex, '<mark>$1</mark>');
+      const firstMark = mainEl.querySelector("mark");
+      if (firstMark) {
+        setTimeout(() => {
+          firstMark.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 300);
+      }
+    }
+  }
+});
+</script>
+<!--searchbar script end-->
+
+<script src="js/main.js"></script>
+<script src="js/highlight-search.js"></script>
+
 </body>
 </html>
