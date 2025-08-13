@@ -1,3 +1,85 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const highlightTerm = params.get("highlight");
+
+  if (highlightTerm) {
+    const regex = new RegExp(`(${highlightTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, "gi");
+
+    const posts = document.querySelectorAll(".post");
+    for (const post of posts) {
+      if (regex.test(post.textContent)) {
+        const moreContent = post.querySelector(".more");
+        if (moreContent && moreContent.style.display !== "block") {
+          const readMoreButton = post.querySelector('.read');
+          if (readMoreButton) {
+            readMoreButton.click();
+          }
+        }
+        post.innerHTML = post.innerHTML.replace(regex, '<mark>$1</mark>');
+
+        const firstMark = post.querySelector("mark");
+        if (firstMark) {
+          firstMark.scrollIntoView({ behavior: "smooth", block: "center" });
+          break;
+        }
+      }
+    }
+  }
+});
+
+
+let searchIndex = [];
+
+fetch('search.json')
+  .then(response => response.json())
+  .then(data => {
+    searchIndex = data;
+  });
+
+document.getElementById('searchBox').addEventListener('input', function () {
+  const query = this.value.trim();
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = '';
+
+  if (!query) return;
+
+  const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+
+  const results = searchIndex.filter(item =>
+    regex.test(item.title) || regex.test(item.text)
+  );
+
+  // Scroll to top so results are visible
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  results.forEach(result => {
+    const textLower = result.text.toLowerCase();
+    const queryLower = query.toLowerCase();
+    const matchIndex = textLower.indexOf(queryLower);
+
+    let snippet = '';
+
+    if (matchIndex !== -1) {
+      const start = Math.max(0, matchIndex - 50);
+      const end = Math.min(result.text.length, matchIndex + query.length + 50);
+      snippet = result.text.substring(start, end);
+    } else {
+      snippet = result.text.substring(0, 100);
+    }
+
+    const highlightedSnippet = snippet.replace(regex, '<mark>$1</mark>');
+    const highlightedTitle = result.title.replace(regex, '<mark>$1</mark>');
+
+    const div = document.createElement('div');
+    div.innerHTML = `
+      <h3><a href="${result.url}?highlight=${encodeURIComponent(query)}">${highlightedTitle}</a></h3>
+      <p>...${highlightedSnippet}...</p>
+    `;
+    resultsDiv.appendChild(div);
+  });
+});
+
+
 (function () {
   function removeDiacritics(s) {
     return s && s.normalize ? s.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : (s || '');

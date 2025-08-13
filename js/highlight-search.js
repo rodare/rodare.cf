@@ -3,25 +3,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const highlightTerm = params.get("highlight");
 
   if (highlightTerm) {
-    const regex = new RegExp(`(${highlightTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, "gi");
-
     const posts = document.querySelectorAll(".post");
     for (const post of posts) {
-      if (regex.test(post.textContent)) {
+      // Find the text node to highlight before expanding the content
+      const mark = highlightFirstMatch(post, highlightTerm);
+
+      if (mark) {
         const moreContent = post.querySelector(".more");
+        // Ensure the content is visible to reveal the highlighted text
         if (moreContent && moreContent.style.display !== "block") {
           const readMoreButton = post.querySelector('.read');
           if (readMoreButton) {
             readMoreButton.click();
           }
         }
-        post.innerHTML = post.innerHTML.replace(regex, '<mark>$1</mark>');
-
-        const firstMark = post.querySelector("mark");
-        if (firstMark) {
-          firstMark.scrollIntoView({ behavior: "smooth", block: "center" });
-          break;
-        }
+        // Scroll to the newly created mark element
+        mark.scrollIntoView({ behavior: "smooth", block: "center" });
+        break; // Stop after finding the first match
       }
     }
   }
