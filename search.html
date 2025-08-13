@@ -24,47 +24,48 @@
         searchIndex = data;
       });
 
-    document.getElementById('searchBox').addEventListener('input', function () {
-      const query = this.value.trim();
-      const resultsDiv = document.getElementById('results');
-      resultsDiv.innerHTML = '';
+document.getElementById('searchBox').addEventListener('input', function () {
+  const query = this.value.trim();
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = '';
 
-      if (!query) return;
+  if (!query) return;
 
-      // Corrected RegExp constructor with backticks
-      const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+  const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
 
-      const results = searchIndex.filter(item => 
-        regex.test(item.title) || regex.test(item.text)
-      );
+  const results = searchIndex.filter(item => 
+    regex.test(item.title) || regex.test(item.text)
+  );
 
-      results.forEach(result => {
-        const textLower = result.text.toLowerCase();
-        const queryLower = query.toLowerCase();
-        const matchIndex = textLower.indexOf(queryLower);
+  // Scroll to top so results are visible
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 
-        let snippet = '';
+  results.forEach(result => {
+    const textLower = result.text.toLowerCase();
+    const queryLower = query.toLowerCase();
+    const matchIndex = textLower.indexOf(queryLower);
 
-        if (matchIndex !== -1) {
-          const start = Math.max(0, matchIndex - 50);
-          const end = Math.min(result.text.length, matchIndex + query.length + 50);
-          snippet = result.text.substring(start, end);
-        } else {
-          snippet = result.text.substring(0, 100);
-        }
+    let snippet = '';
 
-        const highlightedSnippet = snippet.replace(regex, '<mark>$1</mark>');
-        const highlightedTitle = result.title.replace(regex, '<mark>$1</mark>');
+    if (matchIndex !== -1) {
+      const start = Math.max(0, matchIndex - 50);
+      const end = Math.min(result.text.length, matchIndex + query.length + 50);
+      snippet = result.text.substring(start, end);
+    } else {
+      snippet = result.text.substring(0, 100);
+    }
 
-        const div = document.createElement('div');
-        // Corrected template literal with backticks
-        div.innerHTML = `
-          <h3><a href="${result.url}?highlight=${encodeURIComponent(query)}">${highlightedTitle}</a></h3>
-          <p>...${highlightedSnippet}...</p>
-        `;
-        resultsDiv.appendChild(div);
-      });
-    });
+    const highlightedSnippet = snippet.replace(regex, '<mark>$1</mark>');
+    const highlightedTitle = result.title.replace(regex, '<mark>$1</mark>');
+
+    const div = document.createElement('div');
+    div.innerHTML = `
+      <h3><a href="${result.url}?highlight=${encodeURIComponent(query)}">${highlightedTitle}</a></h3>
+      <p>...${highlightedSnippet}...</p>
+    `;
+    resultsDiv.appendChild(div);
+  });
+});
   </script>
 <script src="js/main.js"></script>
 <script src="js/highlight-search.js"></script>

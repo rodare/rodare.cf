@@ -293,9 +293,11 @@ tr:nth-child(even){
 
 #more {display: none;}
 
-.search-container{
-
-}
+  #searchBox{
+    width: 244px;
+    margin-right: 5px;
+    padding:5px;
+  }
 
 @media(max-width:991px){
   header{
@@ -347,7 +349,7 @@ tr:nth-child(even){
     display: initial;
   }
   header label{
-    padding-right: 20px;
+    padding-right: 0px;
   }
     .wrapper {
       width: 92%;
@@ -401,7 +403,9 @@ tr:nth-child(even){
       }
 
       #searchBox{
-        margin-right: 7px;
+        width: 222px;
+        margin-right: 34px;
+        padding:5px;
       }
 
 
