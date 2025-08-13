@@ -1,52 +1,158 @@
+#!/usr/bin/env python3
 import os
+import re
 import json
+import argparse
+from pathlib import Path
+from urllib.parse import urlparse, parse_qs, urlunparse
+import requests
 from bs4 import BeautifulSoup
 
-# SETTINGS
-ROOT_DIR = "."  # Folder to scan
-OUTPUT_FILE = "search.json"
-EXCLUDED_FILES = {"search.html", "search.json"}  # Add more if needed
+GOOGLE_DOC_HOST = "docs.google.com"
 
-def get_html_files(root_dir):
-    """Return list of HTML file paths excluding unwanted files."""
-    html_files = []
-    for dirpath, _, filenames in os.walk(root_dir):
-        for filename in filenames:
-            if filename.endswith(".html") and filename not in EXCLUDED_FILES:
-                html_files.append(os.path.join(dirpath, filename))
-    return html_files
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (compatible; RodareSearchBot/1.0; +https://example.com)"
+}
 
-def extract_text_from_html(file_path):
-    """Extract title, visible text, and URL from an HTML file."""
-    with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
-        soup = BeautifulSoup(f, "html.parser")
+def is_google_doc_iframe(src: str) -> bool:
+    if not src:
+        return False
+    try:
+        u = urlparse(src)
+        return (GOOGLE_DOC_HOST in u.netloc) and u.path.startswith("/document/")
+    except Exception:
+        return False
 
-    # Remove unwanted tags (menus, scripts, etc.)
-    for tag in soup(["script", "style", "noscript", "iframe", "header", "footer", "nav"]):
-        tag.extract()
+def build_gdoc_export_url(src: str) -> str | None:
+    """
+    Supports:
+      - /document/d/<DOC_ID>/...  -> /document/d/<DOC_ID>/export?format=txt
+      - /document/d/e/<EXPORT_ID>/pub?... -> same path but add ?output=txt
+    """
+    try:
+        u = urlparse(src)
+        path = u.path
 
-    title = soup.title.string.strip() if soup.title else os.path.basename(file_path)
-    text = " ".join(soup.stripped_strings)
+        # Pattern A: /document/d/<DOC_ID>/*
+        m = re.search(r"/document/d/([^/]+)/", path)
+        if m and "/document/d/e/" not in path:
+            doc_id = m.group(1)
+            return f"https://{GOOGLE_DOC_HOST}/document/d/{doc_id}/export?format=txt"
 
-    # Make a relative URL
-    rel_url = os.path.relpath(file_path, ROOT_DIR).replace("\\", "/")
+        # Pattern B: /document/d/e/<EXPORT_ID>/pub
+        if "/document/d/e/" in path:
+            # Ensure it ends with /pub (or similar), then add output=txt
+            # Keep original path, replace query with output=txt
+            query = "output=txt"
+            return urlunparse(("https", GOOGLE_DOC_HOST, path, "", query, ""))
 
-    return {
-        "title": title,
-        "text": text,
-        "url": rel_url
-    }
+        return None
+    except Exception:
+        return None
+
+def fetch_gdoc_text(export_url: str, timeout=12) -> str:
+    try:
+        r = requests.get(export_url, headers=HEADERS, timeout=timeout)
+        if r.status_code == 200 and r.text.strip():
+            return r.text
+        else:
+            print(f"[WARN] Unable to fetch Google Doc text ({r.status_code}): {export_url}")
+            return ""
+    except Exception as e:
+        print(f"[WARN] Error fetching Google Doc: {export_url} -> {e}")
+        return ""
+
+def extract_visible_text(el) -> str:
+    # Remove scripts/styles/iframes from the extraction
+    for bad in el.find_all(["script", "style", "noscript"]):
+        bad.decompose()
+    # Keep iframes in DOM (some posts rely on them), but don't read their innerHTML
+    return el.get_text(" ", strip=True)
+
+def process_html_file(html_path: Path, site_root: Path) -> list[dict]:
+    items = []
+    html = html_path.read_text(encoding="utf-8", errors="ignore")
+    soup = BeautifulSoup(html, "lxml")
+
+    # Prefer per-post entries (div.post). If none, index the entire page.
+    posts = soup.select(".post")
+    if not posts:
+        # Single entry for whole page
+        title = (soup.title.string.strip() if soup.title and soup.title.string else html_path.stem)
+        text = extract_visible_text(soup)
+        gdoc_text = ""
+
+        for iframe in soup.find_all("iframe"):
+            src = iframe.get("src")
+            if is_google_doc_iframe(src):
+                export_url = build_gdoc_export_url(src)
+                if export_url:
+                    gdoc_text += "\n" + fetch_gdoc_text(export_url)
+
+        rel_url = "/" + str(html_path.relative_to(site_root)).replace(os.sep, "/")
+        items.append({
+            "title": title,
+            "url": rel_url,
+            "text": (text + "\n" + gdoc_text).strip()
+        })
+        return items
+
+    # Many posts on the same page
+    for post in posts:
+        # Title priority: h2 inside post -> page <title> -> filename
+        h2 = post.find(["h1", "h2", "h3"])
+        title = h2.get_text(" ", strip=True) if h2 else (soup.title.string.strip() if soup.title and soup.title.string else html_path.stem)
+
+        text = extract_visible_text(post)
+        gdoc_text = ""
+
+        # Find embedded Google Docs just in this post
+        for iframe in post.find_all("iframe"):
+            src = iframe.get("src")
+            if is_google_doc_iframe(src):
+                export_url = build_gdoc_export_url(src)
+                if export_url:
+                    gdoc_text += "\n" + fetch_gdoc_text(export_url)
+
+        rel_url = "/" + str(html_path.relative_to(site_root)).replace(os.sep, "/")
+        items.append({
+            "title": title,
+            "url": rel_url,   # You could add an anchor if you add ids to each post
+            "text": (text + "\n" + gdoc_text).strip()
+        })
+
+    return items
 
 def main():
-    files = get_html_files(ROOT_DIR)
-    print(f"Found {len(files)} HTML files to index.")
+    ap = argparse.ArgumentParser(description="Generate search.json with Google Docs text included.")
+    ap.add_argument("--root", default=".", help="Site root to scan (default: .)")
+    ap.add_argument("--out", default="search.json", help="Output JSON path (default: search.json)")
+    ap.add_argument("--include", nargs="*", default=[".html", ".htm"], help="File extensions to include")
+    ap.add_argument("--exclude", nargs="*", default=["/node_modules/", "/.git/"], help="Folders to exclude (substring match)")
+    args = ap.parse_args()
 
-    search_data = [extract_text_from_html(file) for file in files]
+    root = Path(args.root).resolve()
+    all_items = []
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as out:
-        json.dump(search_data, out, ensure_ascii=False, indent=2)
+    for path in root.rglob("*"):
+        if not path.is_file():
+            continue
+        if not any(str(path).lower().endswith(ext) for ext in args.include):
+            continue
+        pstr = str(path)
+        if any(ex in pstr for ex in args.exclude):
+            continue
+        try:
+            items = process_html_file(path, root)
+            all_items.extend(items)
+            print(f"[OK] {path} -> {len(items)} item(s)")
+        except Exception as e:
+            print(f"[ERROR] {path}: {e}")
 
-    print(f"Search index created: {OUTPUT_FILE}")
+    # Write JSON
+    out_path = Path(args.out)
+    out_path.write_text(json.dumps(all_items, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"\nWrote {len(all_items)} records to {out_path}")
 
 if __name__ == "__main__":
     main()
