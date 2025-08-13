@@ -1,30 +1,52 @@
-from bs4 import BeautifulSoup
 import os
 import json
+from bs4 import BeautifulSoup
 
-index = []
+# SETTINGS
+ROOT_DIR = "."  # Folder to scan
+OUTPUT_FILE = "search.json"
+EXCLUDED_FILES = {"search.html", "search.json"}  # Add more if needed
 
-for filename in os.listdir('.'):
-    if filename.endswith('.html'):
-        try:
-            with open(filename, 'r', encoding='utf-8') as f:
-                content = f.read()
-        except UnicodeDecodeError:
-            with open(filename, 'r', encoding='latin-1') as f:
-                content = f.read()
+def get_html_files(root_dir):
+    """Return list of HTML file paths excluding unwanted files."""
+    html_files = []
+    for dirpath, _, filenames in os.walk(root_dir):
+        for filename in filenames:
+            if filename.endswith(".html") and filename not in EXCLUDED_FILES:
+                html_files.append(os.path.join(dirpath, filename))
+    return html_files
 
-        soup = BeautifulSoup(content, 'html.parser')
-        text = soup.get_text(separator=' ', strip=True)
+def extract_text_from_html(file_path):
+    """Extract title, visible text, and URL from an HTML file."""
+    with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+        soup = BeautifulSoup(f, "html.parser")
 
-        print(f"File: {filename}")
-        print(f"Text snippet: {text[:200]}")
-        print('-' * 40)
+    # Remove unwanted tags (menus, scripts, etc.)
+    for tag in soup(["script", "style", "noscript", "iframe", "header", "footer", "nav"]):
+        tag.extract()
 
-        index.append({
-            'title': soup.title.string if soup.title else filename,
-            'url': filename,
-            'text': text
-        })
+    title = soup.title.string.strip() if soup.title else os.path.basename(file_path)
+    text = " ".join(soup.stripped_strings)
 
-with open('search.json', 'w', encoding='utf-8') as f:
-    json.dump(index, f, ensure_ascii=False, indent=2)
+    # Make a relative URL
+    rel_url = os.path.relpath(file_path, ROOT_DIR).replace("\\", "/")
+
+    return {
+        "title": title,
+        "text": text,
+        "url": rel_url
+    }
+
+def main():
+    files = get_html_files(ROOT_DIR)
+    print(f"Found {len(files)} HTML files to index.")
+
+    search_data = [extract_text_from_html(file) for file in files]
+
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as out:
+        json.dump(search_data, out, ensure_ascii=False, indent=2)
+
+    print(f"Search index created: {OUTPUT_FILE}")
+
+if __name__ == "__main__":
+    main()
