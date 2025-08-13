@@ -1,40 +1,42 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const highlightTerm = params.get("highlight");
 
-  if (highlightTerm) {
-    const regex = new RegExp(`(${highlightTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, "gi");
+  document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const highlightTerm = params.get("highlight");
 
-    const posts = document.querySelectorAll(".post");
-    for (const post of posts) {
-      if (regex.test(post.textContent)) {
-        const moreContent = post.querySelector(".more");
-        if (moreContent && moreContent.style.display !== "block") {
-          const readMoreButton = post.querySelector('.read');
-          if (readMoreButton) {
-            readMoreButton.click();
+    if (highlightTerm) {
+      const regex = new RegExp(`(${highlightTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, "gi");
+
+      const posts = document.querySelectorAll(".post");
+      for (const post of posts) {
+        if (regex.test(post.textContent)) {
+          const moreContent = post.querySelector(".more");
+          if (moreContent && moreContent.style.display !== "block") {
+            const readMoreButton = post.querySelector('.read');
+            if (readMoreButton) {
+              readMoreButton.click();
+            }
           }
-        }
-        post.innerHTML = post.innerHTML.replace(regex, '<mark>$1</mark>');
+          post.innerHTML = post.innerHTML.replace(regex, '<mark>$1</mark>');
 
-        const firstMark = post.querySelector("mark");
-        if (firstMark) {
-          firstMark.scrollIntoView({ behavior: "smooth", block: "center" });
-          break;
+          const firstMark = post.querySelector("mark");
+          if (firstMark) {
+            firstMark.scrollIntoView({ behavior: "smooth", block: "center" });
+            break;
+          }
         }
       }
     }
-  }
-});
-
-
-let searchIndex = [];
-
-fetch('search.json')
-  .then(response => response.json())
-  .then(data => {
-    searchIndex = data;
   });
+
+
+
+  let searchIndex = [];
+
+  fetch('search.json')
+    .then(response => response.json())
+    .then(data => {
+      searchIndex = data;
+    });
 
 document.getElementById('searchBox').addEventListener('input', function () {
   const query = this.value.trim();
@@ -45,7 +47,7 @@ document.getElementById('searchBox').addEventListener('input', function () {
 
   const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
 
-  const results = searchIndex.filter(item =>
+  const results = searchIndex.filter(item => 
     regex.test(item.title) || regex.test(item.text)
   );
 
@@ -80,7 +82,7 @@ document.getElementById('searchBox').addEventListener('input', function () {
 });
 
 
-(function () {
+  (function () {
   function removeDiacritics(s) {
     return s && s.normalize ? s.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : (s || '');
   }
