@@ -63,11 +63,27 @@ def fetch_gdoc_text(export_url: str, timeout=12) -> str:
         return ""
 
 def extract_visible_text(el) -> str:
-    # Remove scripts/styles/iframes from the extraction
-    for bad in el.find_all(["script", "style", "noscript"]):
+    # Remove unwanted tags
+    for bad in el.find_all([
+        "script", "style", "noscript", "code", "pre", "meta", "link"
+    ]):
         bad.decompose()
-    # Keep iframes in DOM (some posts rely on them), but don't read their innerHTML
-    return el.get_text(" ", strip=True)
+
+    # Remove inline event handler attributes (onclick, onload, etc.)
+    for tag in el.find_all(True):  # all tags
+        atts = list(tag.attrs.keys())
+        for a in atts:
+            if a.lower().startswith("on"):  # onclick, onerror, etc.
+                del tag[a]
+
+    text = el.get_text(" ", strip=True)
+
+    # Strip weird JS-like tokens that sometimes sneak through
+    text = re.sub(r"[;{}()=<>]+", " ", text)
+    text = re.sub(r"\b(function|var|let|const|return|if|else|new|document|window)\b", " ", text, flags=re.I)
+    text = re.sub(r"\s+", " ", text)
+
+    return text.strip()
 
 def process_html_file(html_path: Path, site_root: Path) -> list[dict]:
     items = []
