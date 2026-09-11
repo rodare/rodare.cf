@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="google" content="notranslate" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google" content="notranslate" />
   <title>Rodare</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="css/style.css">
+  
 </head>
 
 <!-- Google Analytics -->
@@ -30,13 +31,13 @@
   <img class="img-banner" src="images/banner2b.jpg" alt="libros">
   <img class="img-banner2" src="images/banner4.jpg" alt="libros2">
 
-    <div class="translate">
-                  <!-- GTranslate: https://gtranslate.io/ -->        
-<div class="gtranslate_wrapper"></div>
-        <script>window.gtranslateSettings = {"default_language":"en","languages":["en","ja","pl","es"],"wrapper_selector":".gtranslate_wrapper","flag_size":16,"flag_style":"3d"}</script>
-        <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
-      </div>
-<!-- end of GTranslate-->
+  <div class="translate">
+    <!-- GTranslate: https://gtranslate.io/ -->        
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = {"default_language":"en","languages":["en","ja","pl","es"],"wrapper_selector":".gtranslate_wrapper","flag_size":16,"flag_style":"3d"}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+  </div>
+  <!-- end of GTranslate-->
 
   <nav class="dropdown">
     <ul>
@@ -87,26 +88,26 @@
     </ul>
   </nav>
   
-       <div class="search-container">         <input type="text" id="searchBox" placeholder="Type to search...">
-
-      </div>
+  <div class="search-container">
+    <input type="text" id="searchBox" placeholder="Type to search...">
+  </div>
   
 </header>
 
 <main class="wrapper">
   <article class="img-info">
-<div id="results"></div>
+    <div id="results"></div>
     <h2>Blog</h2>
     <div class="row">
       <div class="leftcolumn">
 
         <!-- First Blog Post -->
-                <div class="card">
+        <div class="card">
           <div class="post">
             <h2>Cuento corto "Rayito de sol"</h2>
             <h5>2026.08.31</h5>
             <div class="fakeimg" style="height:200px;">
-              <img src="https://as2.ftcdn.net/v2/jpg/01/89/80/79/1000_F_189807931_bEnyHTBePH2sph6zyBa8hawExX7NUj1w.webp" style="height:100%;width:100%;padding:0px 30px;">
+              <img class="zoomable-img" src="https://as2.ftcdn.net/v2/jpg/01/89/80/79/1000_F_189807931_bEnyHTBePH2sph6zyBa8hawExX7NUj1w.webp" style="height:100%;width:100%;padding:0px 30px; object-fit: cover;">
             </div>
             <p>Rayito de sol</p>
             <span class="dots">...</span>
@@ -130,7 +131,7 @@
             <h2>Cuento corto "Con tranquila sonrisa"</h2>
             <h5>2026.08.17</h5>
             <div class="fakeimg" style="height:200px;">
-              <img src="https://mobiliar.rokka.io/dynamic/crop-width-3298-height-1484-mode-ratio--resize-width-3298--options-autoformat-true-optim.quality-4/ad4ccffe41a8bfd0315e4c25f7d59ebe23c9ac6b/1207020.jpg" style="height:100%;width:100%;padding:0px 30px;">
+              <img class="zoomable-img" src="https://mobiliar.rokka.io/dynamic/crop-width-3298-height-1484-mode-ratio--resize-width-3298--options-autoformat-true-optim.quality-4/ad4ccffe41a8bfd0315e4c25f7d59ebe23c9ac6b/1207020.jpg" style="height:100%;width:100%;padding:0px 30px; object-fit: cover;">
             </div>
             <p>Con tranquila sonrisa</p>
             <span class="dots">...</span>
@@ -153,10 +154,14 @@
       <aside class="rightcolumn">
         <div class="card">
           <h2>About Me</h2>
-          <div class="fakeimg" style="height:100px;">Image</div>
-          <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+          <!-- Dodana klasa zoomable-img do zdjęcia profilowego -->
+          <img class="zoomable-img" src="https://rodrigoarenascatalan.cf/images/perfil2.png" alt="Rodrigo Arenas" style="width:150px; height:150px; border-radius:50%; object-fit:cover; display:block; margin:0 auto 15px auto; border:3px solid #ccc; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+          <p style="text-align: justify;">
+            I'm Rodrigo Arenas Catalán, Teacher, Artist and the creator of this website. 
+            Feel free to contact me for any questions or suggestions. My email is rodare.cf@gmail.com.
+          </p>
         </div>
-        <div class="card">
+          <div class="card">
           <h3>Posts by Year</h3>
           <a href="blog.html"><div class="fakeimg">2026</div></a><br>
           <a href="blog2025.html"><div class="fakeimg">2025</div></a><br>
@@ -173,8 +178,38 @@
   </article>
 </main>
 
+<!-- Modal do podglądu zdjęć -->
+<div id="imageModal" class="image-modal">
+  <span class="close-modal">&times;</span>
+  <img id="modalImg" src="" alt="Powiększone zdjęcie">
+</div>
+
+
 <script src="js/main.js"></script>
 <script src="js/highlight-search.js"></script>
+
+<!-- Search highlight script -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const highlightTerm = params.get("highlight");
+  
+  if (highlightTerm) {
+    const regex = new RegExp(`(${highlightTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, "gi");
+    const mainEl = document.querySelector("main");
+    if (mainEl) {
+      mainEl.innerHTML = mainEl.innerHTML.replace(regex, '<mark>$1</mark>');
+      const firstMark = mainEl.querySelector("mark");
+      if (firstMark) {
+        setTimeout(() => {
+          firstMark.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 300);
+      }
+    }
+  }
+});
+</script>
+<!--searchbar script end-->
 
 </body>
 </html>

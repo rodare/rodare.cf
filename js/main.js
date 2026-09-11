@@ -212,7 +212,41 @@ location.replace("basic2.html")
 document.getElementById("output2").innerHTML=string;
 
 }
+  // Skrypt obsługujący powiększanie wszystkich zdjęć z klasą .zoomable-img
+  $(document).ready(function() {
+    $('.zoomable-img').on('click', function() {
+      var src = $(this).attr('src');
+      $('#modalImg').attr('src', src);
+      $('#imageModal').css('display', 'flex');
+    });
 
+    // Zamykanie modala po kliknięciu w tło lub przycisk zamknij
+    $('.close-modal, #imageModal').on('click', function(e) {
+      if (e.target !== $('#modalImg')[0]) {
+        $('#imageModal').hide();
+      }
+    });
+  });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const highlightTerm = params.get("highlight");
+  
+  if (highlightTerm) {
+    const regex = new RegExp(`(${highlightTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, "gi");
+    const mainEl = document.querySelector("main");
+    if (mainEl) {
+      mainEl.innerHTML = mainEl.innerHTML.replace(regex, '<mark>$1</mark>');
+      const firstMark = mainEl.querySelector("mark");
+      if (firstMark) {
+        setTimeout(() => {
+          firstMark.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 300);
+      }
+    }
+  }
+});
 
 function toggleContent1() {
   // Get the DOM reference

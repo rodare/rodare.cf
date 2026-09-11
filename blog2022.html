@@ -125,11 +125,15 @@
       </div>
     </div>
     <div class="rightcolumn">
-      <div class="card">
-        <h2>About Me</h2>
-        <div class="fakeimg" style="height:100px;">Image</div>
-        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-      </div>
+        <div class="card">
+          <h2>About Me</h2>
+          <!-- Dodana klasa zoomable-img do zdjęcia profilowego -->
+          <img class="zoomable-img" src="https://rodrigoarenascatalan.cf/images/perfil2.png" alt="Rodrigo Arenas" style="width:150px; height:150px; border-radius:50%; object-fit:cover; display:block; margin:0 auto 15px auto; border:3px solid #ccc; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+          <p style="text-align: justify;">
+            I'm Rodrigo Arenas Catalán, Teacher, Artist and the creator of this website. 
+            Feel free to contact me for any questions or suggestions. My email is rodare.cf@gmail.com.
+          </p>
+        </div>
       <div class="card">
         <h3>Posts by Year</h3>
           <a href="blog.html"><div class="fakeimg">2026</div></a><br>
@@ -178,6 +182,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 <!--searchbar script end-->
+
+<!-- Modal do podglądu zdjęć -->
+<div id="imageModal" class="image-modal">
+  <span class="close-modal">&times;</span>
+  <img id="modalImg" src="" alt="Powiększone zdjęcie">
+</div>
 
 <script src="js/main.js"></script>
 <script src="js/highlight-search.js"></script>
