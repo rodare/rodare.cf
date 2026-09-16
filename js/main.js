@@ -229,24 +229,24 @@ document.getElementById("output2").innerHTML=string;
   });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const highlightTerm = params.get("highlight");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const params = new URLSearchParams(window.location.search);
+//   const highlightTerm = params.get("highlight");
   
-  if (highlightTerm) {
-    const regex = new RegExp(`(${highlightTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, "gi");
-    const mainEl = document.querySelector("main");
-    if (mainEl) {
-      mainEl.innerHTML = mainEl.innerHTML.replace(regex, '<mark>$1</mark>');
-      const firstMark = mainEl.querySelector("mark");
-      if (firstMark) {
-        setTimeout(() => {
-          firstMark.scrollIntoView({ behavior: "smooth", block: "center" });
-        }, 300);
-      }
-    }
-  }
-});
+//   if (highlightTerm) {
+//     const regex = new RegExp(`(${highlightTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, "gi");
+//     const mainEl = document.querySelector("main");
+//     if (mainEl) {
+//       mainEl.innerHTML = mainEl.innerHTML.replace(regex, '<mark>$1</mark>');
+//       const firstMark = mainEl.querySelector("mark");
+//       if (firstMark) {
+//         setTimeout(() => {
+//           firstMark.scrollIntoView({ behavior: "smooth", block: "center" });
+//         }, 300);
+//       }
+//     }
+//   }
+// });
 
 function toggleContent1() {
   // Get the DOM reference

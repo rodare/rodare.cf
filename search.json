@@ -483,5 +483,15 @@
     "title": "Password Protected Page",
     "url": "/exp/residence-permit.html",
     "text": "Password Protected Page This page is password protected. Password Sorry, please try again. Sorry, something went wrong. Success! Submit Sorry, but password protection only works over a secure connection. Please load this page via HTTPS. Your web browser appears to be outdated. Please visit this page using a modern browser. Protected by PageCrypt"
+  },
+  {
+    "title": "Cuento corto \"Rayito de sol\"",
+    "url": "/blog.html",
+    "text": "Rayito de sol tekst opowiadania..."
+  },
+  {
+    "title": "Cuento corto \"Con tranquila sonrisa\"",
+    "url": "/blog.html",
+    "text": "Con tranquila sonrisa tekst opowiadania..."
   }
 ]

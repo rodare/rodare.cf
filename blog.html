@@ -137,6 +137,16 @@
             <span class="dots">...</span>
             <span class="more">
               <iframe src="https://docs.google.com/document/d/e/2PACX-1vSeBQcgbwotemihJsmAqx2AHjmpDVEiIHfAu9bT089gTg2iB1Ry8th6dFtofXVsUIN60OzKRTVqwgMV/pub?embedded=true" style="border:none;" width="100%" height="500px"></iframe>
+             <p>Había una vez un hombre que se puso a meditar y se perdió en el silencio. Su cuerpo estaba tan quieto como el de una momia. El hombre había dejado ese cuerpo que le había servido como puente para entrar en un ámbito sin voz ni voluntad ni tiempo. 
+
+Los vecinos preocupados llamaron a la ambulancia y se llevaron al hombre en posición de loto. Al llegar al hospital, el médico lo examinó. Tenía la mirada perdida y no respondía a sus preguntas. El médico lo miró fijamente. Su mirada era tan tranquila pero a la vez tan lejana que se preguntó: ¿Cómo puedo comunicarme con alguien que no está aquí? Si él no viene, tendré que ir a buscarlo yo. Así que el médico también se puso a meditar con la esperanza de encontrar a su paciente. 
+
+Después de unos diez minutos de burocracia meditativa llegó a un terreno baldío. El pasto crecía como espuma color verde claro. Después de avanzar unos pasos se encontró con su paciente sentado en la hierba con la vista en un lago donde al parecer se divertían unas personas con un perro. -Buenas tardes - dijo el médico. El hombre se volteó con un rostro tranquilo insinuando una sonrisa al desconocido. Hace mucho tiempo que el médico no se sentía tan bien, y tan solo por el contacto con este hombre tranquilo y alegre. Es hermoso este lugar. ¿Dónde estamos? - preguntó el médico mientras se sentaba al lado del hombre. El hombre lo volvió a mirar con una sonrisa como diciendo: No tengo la menor idea. 
+
+De pronto el médico se percató de la futilidad de las palabras. En aquel lugar bastaba con solo ser y estar. Como olvidándose de todo comenzó a observar el tronco de un árbol cercano cubierto de enredaderas y la luz que se posaba sobre los contornos de sus hojas refrescadas algunas por gotas de rocío. A la vista de cualquier transeúnte, eran dos hombres sentados en el pasto. Para este par sin embargo, el tiempo se había detenido y sólo existía su sensación de bienestar y agradecimiento por la belleza que los rodeaba, y de la cual ya eran parte como dos amigos que se conocían de hace tiempo. 
+
+En esto empezó a llover. El médico sintió que nunca había disfrutado tanto de una lluvia como aquella. Cada gota sobre su cara y cuerpo era como un regalo. De pronto un rayo crujió a lo lejos. Los hombres se miraron y sin decirse ninguna palabra se entendieron con una tranquila sonrisa. Se incorporaron y los rayos ahora eran golpes de una puerta. Entonces cada uno tomando una de sus manillas, la abrieron de par en par y apareció la secretaria del médico con rostro sorprendido. “¡Doctor, ya ha curado al paciente!” - exclamó al verlos juntos de buen humor. - En realidad, él me ha curado a mi - respondió el médico. Despidiéndose con un abrazo como dos buenos amigos, el hombre le dijo al médico: “Espero vuelvas a visitarme y nos bañemos en el lago. Así lo haré - respondió. 
+</p>
               <script src="https://utteranc.es/client.js"
                 repo="rodare/rodare.cf"
                 issue-term="Con tranquila sonrisa"
@@ -188,28 +198,6 @@
 <script src="js/main.js"></script>
 <script src="js/highlight-search.js"></script>
 
-<!-- Search highlight script -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const highlightTerm = params.get("highlight");
-  
-  if (highlightTerm) {
-    const regex = new RegExp(`(${highlightTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, "gi");
-    const mainEl = document.querySelector("main");
-    if (mainEl) {
-      mainEl.innerHTML = mainEl.innerHTML.replace(regex, '<mark>$1</mark>');
-      const firstMark = mainEl.querySelector("mark");
-      if (firstMark) {
-        setTimeout(() => {
-          firstMark.scrollIntoView({ behavior: "smooth", block: "center" });
-        }, 300);
-      }
-    }
-  }
-});
-</script>
-<!--searchbar script end-->
 
 </body>
 </html>
